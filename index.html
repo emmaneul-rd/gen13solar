@@ -11,6 +11,7 @@
   <link rel="canonical" href="https://gen13solarco.com/">
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" as="image" href="assets/images/hero-home.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,16 +22,99 @@
   <meta property="og:url" content="https://gen13solarco.com/">
   <meta property="og:image" content="https://gen13solarco.com/assets/images/og-gen13-solar.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Gen 13 Solar",
+    "description": "Residential, commercial and nonprofit solar design, installation and support for Dallas–Fort Worth, Texas.",
+    "url": "https://gen13solarco.com",
+    "telephone": "+1-940-206-7006",
+    "email": "jfelizgen13@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dallas–Fort Worth",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "name": "Dallas–Fort Worth, Texas"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does a home solar system work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Solar panels convert sunlight into direct-current electricity. An inverter converts that power into alternating current your home can use. Depending on your design, excess production may flow to the utility grid or charge a battery."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long can solar panels last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many modern panels are designed to operate for 25 years or more, although output gradually declines and warranties vary by manufacturer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a battery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Grid-tied solar can operate without storage. Batteries can add backup capability, time-of-use flexibility and more control, but the right choice depends on budget, outage concerns and utility rules."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do panels work on cloudy or rainy days?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, though production is usually lower than under direct sun. Annual energy modeling accounts for local weather patterns."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can solar affect property value?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Owned solar may contribute to buyer interest and perceived operating savings, but market impact varies. Financing structure, system condition, documentation and local appraisal practices all matter."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What size system should I get?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The right size depends on annual usage, roof area, orientation, shade, panel output, future loads such as EV charging, utility limits and your financial goals."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="">
   <a class="skip-link" href="#main">Skip to content</a>
-<div class="topbar">
+<aside class="topbar" aria-label="Site information">
   <div class="container topbar__inner">
     <a class="topbar__item" href="https://maps.google.com/?q=Dallas+Fort+Worth+Texas" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#pin"></use></svg> Dallas–Fort Worth, Texas</a>
     <div class="topbar__message">Community-first solar design, installation, financing support and service.</div>
     <a class="topbar__item" href="tel:+19402067006"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg> Call +1 (940) 206-7006</a>
   </div>
-</div>
+</aside>
 <header class="site-header">
   <div class="container navbar">
     <a class="brand" href="index.html" aria-label="Gen 13 Solar home">
@@ -92,7 +176,7 @@
         <div class="metric"><div class="metric__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chart"></use></svg></div><strong>Up to 20–40%</strong><span>potentially lower energy costs</span><small>Varies by site, plan and usage</small></div>
         <div class="metric"><div class="metric__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#calendar"></use></svg></div><strong>3–7 years</strong><span>illustrative payback range</span><small>Ownership scenario dependent</small></div>
         <div class="metric"><div class="metric__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#sun"></use></svg></div><strong>25+ years</strong><span>typical panel lifespan</span><small>Product and maintenance dependent</small></div>
-        <div class="metric"><div class="metric__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#badge"></use></svg></div><strong>288+</strong><span>client-reported completed projects</span><small>Confirm final count before launch</small></div>
+        <div class="metric"><div class="metric__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#badge"></use></svg></div><strong>288+</strong><span>client-reported completed projects</span><small>Client-reported total</small></div>
       </div>
     </div>
   </section>
@@ -225,7 +309,7 @@
     </div>
   </section>
 </main>
-  <section class="cta-band">
+  <section class="cta-band" aria-label="Contact call to action">
     <div class="container cta-band__inner">
       <div>
         <p class="eyebrow">Your next power move</p>
@@ -244,9 +328,9 @@
         <img src="assets/images/gen13-logo.png" alt="Gen 13 Solar">
         <p>Residential, commercial and community solar solutions for Dallas–Fort Worth, built around clear guidance, responsible design and long-term support.</p>
         <div class="socials" aria-label="Social links">
-          <a class="social-link" href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#facebook"></use></svg></a>
-          <a class="social-link" href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#instagram"></use></svg></a>
-          <a class="social-link" href="#" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#linkedin"></use></svg></a>
+          <a class="social-link" href="#" onclick="return false" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#facebook"></use></svg></a>
+          <a class="social-link" href="#" onclick="return false" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#instagram"></use></svg></a>
+          <a class="social-link" href="#" onclick="return false" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#linkedin"></use></svg></a>
         </div>
       </div>
       <div class="footer-col">
@@ -267,10 +351,10 @@
       <div class="footer-bottom__links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="sitemap.xml">Sitemap</a></div>
     </div>
   </footer>
-  <div class="floating-actions" aria-label="Quick contact">
+  <nav class="floating-actions" aria-label="Quick contact">
     <a class="floating-action floating-action--gold" href="contact.html" aria-label="Request a quote"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#mail"></use></svg></a>
     <a class="floating-action" href="tel:+19402067006" aria-label="Call Gen 13 Solar"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg></a>
-  </div>
+  </nav>
   <script src="assets/js/app.js" defer></script>
 </body>
 </html>

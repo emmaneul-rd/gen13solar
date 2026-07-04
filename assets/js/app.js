@@ -14,6 +14,7 @@
     menuToggle.addEventListener('click', () => {
       const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      menuToggle.setAttribute('aria-label', !isOpen ? 'Close menu' : 'Open menu');
       navLinks.classList.toggle('is-open', !isOpen);
       document.body.classList.toggle('nav-open', !isOpen);
     });
@@ -23,6 +24,16 @@
       document.body.classList.remove('nav-open');
     }));
   }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks?.classList.contains('is-open')) {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      navLinks.classList.remove('is-open');
+      document.body.classList.remove('nav-open');
+      menuToggle.setAttribute('aria-label', 'Open menu');
+      menuToggle.focus();
+    }
+  });
 
   $$('.faq-button').forEach(button => {
     button.addEventListener('click', () => {
@@ -123,18 +134,15 @@
         const firstInvalid = $('[aria-invalid="true"]', form);
         firstInvalid?.focus();
         toast('Please review the highlighted fields.');
+      } else {
+        const submitBtn = form.querySelector('[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending...';
+        }
       }
     });
   });
-
-  $$('[data-copy]').forEach(button => button.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(button.dataset.copy || '');
-      toast('Copied to clipboard.');
-    } catch {
-      toast('Copy was not available in this browser.');
-    }
-  }));
 
   const year = new Date().getFullYear();
   $$('[data-year]').forEach(node => { node.textContent = String(year); });
