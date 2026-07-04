@@ -1,0 +1,13 @@
+{
+  "name": "gen13-solar-modern-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-oriented static website for Gen 13 Solar",
+  "scripts": {
+    "dev": "npx serve . -l 4173",
+    "check": "node scripts/check-site.mjs"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

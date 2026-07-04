@@ -1,0 +1,11 @@
+{
+  "name": "Gen 13 Solar",
+  "short_name": "Gen 13 Solar",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#071c33",
+  "icons": [
+    {"src":"assets/icons/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}
+  ]
+}

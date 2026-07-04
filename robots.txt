@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gen13solarco.com/sitemap.xml
