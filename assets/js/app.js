@@ -4,7 +4,7 @@
 
   const header = $('.site-header');
   const menuToggle = $('.menu-toggle');
-  const navLinks = $('.nav-links');
+  const navLinks = $('.nav-collapse');
 
   const syncHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
   syncHeader();

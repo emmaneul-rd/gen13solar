@@ -149,7 +149,8 @@ p { color: var(--slate-700); line-height: 1.72; }
   transition: box-shadow .25s ease, background .25s ease;
 }
 .site-header.is-scrolled { box-shadow: 0 12px 36px rgba(3,20,36,.09); background: rgba(255,255,255,.96); }
-.navbar { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.navbar { position: relative; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.nav-collapse { display: flex; align-items: center; gap: 20px; }
 .brand { display: inline-flex; align-items: center; flex: 0 0 auto; }
 .brand img { width: 174px; height: 72px; object-fit: contain; object-position: left center; }
 .nav-links { display: flex; align-items: center; gap: 34px; }
@@ -558,35 +559,50 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 
 @media (max-width: 860px) {
   .section { padding: 82px 0; }
-  .nav-links,
-  .nav-cta { display: none; }
-  .language-switcher { margin-left: auto; }
-  .menu-toggle { display: inline-flex; position: relative; }
-  .nav-links.is-open {
+  .nav-collapse { display: none; }
+  .nav-collapse.is-open {
     display: flex;
-    position: fixed;
-    inset: calc(38px + var(--header-height)) 0 0;
-    z-index: 33;
-    padding: 34px 24px;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 16px;
+    right: 16px;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 26px;
-    background: var(--white);
-    overflow-y: auto;
-  }
-  .nav-links.is-open a { font-size: 1.25rem; }
-  .nav-links.is-open::after {
-    content: "Call +1 (940) 206-7006";
-    display: block;
-    width: 100%;
-    margin-top: 14px;
+    align-items: stretch;
+    gap: 6px;
     padding: 16px;
-    border-radius: 14px;
-    color: var(--navy-950);
-    background: var(--gold-500);
-    text-align: center;
-    font-weight: 900;
+    border-radius: 18px;
+    background: var(--white);
+    border: 1px solid rgba(7, 28, 51, 0.12);
+    box-shadow: 0 24px 70px rgba(7, 28, 51, 0.18);
+    z-index: 50;
   }
+  .nav-collapse .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+  .nav-collapse .nav-links a {
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+  .nav-collapse .nav-links a::after { display: none; }
+  .nav-collapse .nav-links a:hover,
+  .nav-collapse .nav-links a[aria-current="page"] {
+    background: rgba(255, 190, 0, 0.14);
+  }
+  .nav-collapse .nav-cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 8px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(7, 28, 51, 0.08);
+  }
+  .nav-collapse .nav-cta .btn { width: 100%; justify-content: center; }
+  .nav-collapse .nav-cta .btn-outline { display: inline-flex; }
+  .language-switcher { margin-left: auto; }
+  .menu-toggle { display: inline-flex; }
   .hero { background: var(--cream-50); }
   .hero__inner { min-height: auto; grid-template-columns: 1fr; }
   .hero__content { padding: 74px 0 54px; }

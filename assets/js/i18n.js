@@ -23,8 +23,18 @@
     t: (key) => getTranslation(key, currentLang),
   };
 
+  /* ---- bind language switch buttons ---- */
+  function bindLanguageButtons() {
+    document.querySelectorAll('[data-lang-switch]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        switchLang(btn.getAttribute('data-lang-switch'));
+      });
+    });
+  }
+
   /* ---- init ---- */
   function init() {
+    bindLanguageButtons();
     const stored = localStorage.getItem(STORAGE_KEY);
     const lang = stored || FALLBACK_LANG;
     loadTranslations(() => applyLang(lang, false));
@@ -129,5 +139,12 @@
       return translations[FALLBACK_LANG][key];
     }
     return undefined; /* let the original DOM text show */
+  }
+
+  /* ---- bootstrap once DOM is ready ---- */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 })();
