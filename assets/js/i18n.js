@@ -80,6 +80,12 @@
       lng = FALLBACK_LANG;
     }
     applyLang(lng, true);
+    const body = document.body;
+    if (body) {
+      body.classList.remove('i18n-flash');
+      void body.offsetWidth;
+      body.classList.add('i18n-flash');
+    }
   }
 
   /* ---- apply translation ---- */

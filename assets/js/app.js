@@ -72,7 +72,7 @@
   sunExposure?.addEventListener('input', updateCalculator);
   updateCalculator();
 
-  const revealItems = $$('.reveal');
+  const revealItems = $$('.reveal, .reveal-group, [data-reveal]');
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {

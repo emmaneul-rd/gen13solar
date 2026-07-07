@@ -209,5 +209,30 @@
 
   "lang.switch": "EN | ES",
   "lang.english": "EN",
-  "lang.spanish": "ES"
+  "lang.spanish": "ES",
+
+  "motion.item1": "Solar en Dallas-Fort Worth",
+  "motion.item2": "Residencial y Comercial",
+  "motion.item3": "Orientación de financiamiento",
+  "motion.item4": "Consulta sin presión",
+  "motion.item5": "Soporte local",
+
+  "mobileNav.services": "Servicios",
+  "mobileNav.projects": "Proyectos",
+  "mobileNav.estimate": "Estimación",
+  "mobileNav.contact": "Contacto",
+
+  "services.viewAll": "Ver todos los servicios",
+
+  "team.kicker": "El equipo",
+  "team.title": "Conoce a las personas detrás de Gen 13 Solar",
+  "team.subtitle": "Un equipo local enfocado en orientación clara, instalaciones limpias y soporte a largo plazo.",
+  "team.person1.name": "Nombre pendiente",
+  "team.person1.role": "Cargo pendiente",
+  "team.person1.bio": "Orientación solar cercana, educación al cliente y coordinación del proyecto.",
+  "team.person2.name": "Nombre pendiente",
+  "team.person2.role": "Cargo pendiente",
+  "team.person2.bio": "Planificación de instalación, coordinación en campo y soporte a largo plazo.",
+  "team.note": "Nombres y cargos pendientes de aprobación del cliente.",
+  "team.cta": "Conoce al equipo"
 }

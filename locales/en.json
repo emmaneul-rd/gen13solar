@@ -209,5 +209,30 @@
 
   "lang.switch": "EN | ES",
   "lang.english": "EN",
-  "lang.spanish": "ES"
+  "lang.spanish": "ES",
+
+  "motion.item1": "Dallas–Fort Worth Solar",
+  "motion.item2": "Residential & Commercial",
+  "motion.item3": "Financing Guidance",
+  "motion.item4": "No-Pressure Consultation",
+  "motion.item5": "Local Support",
+
+  "mobileNav.services": "Services",
+  "mobileNav.projects": "Projects",
+  "mobileNav.estimate": "Estimate",
+  "mobileNav.contact": "Contact",
+
+  "services.viewAll": "View all services",
+
+  "team.kicker": "The team",
+  "team.title": "Meet the people behind Gen 13 Solar",
+  "team.subtitle": "A local team focused on clear guidance, clean installations, and long-term support.",
+  "team.person1.name": "Name pending",
+  "team.person1.role": "Role pending",
+  "team.person1.bio": "Community-first solar guidance, customer education, and project coordination.",
+  "team.person2.name": "Name pending",
+  "team.person2.role": "Role pending",
+  "team.person2.bio": "Installation planning, field coordination, and long-term support.",
+  "team.note": "Team names and roles pending client approval.",
+  "team.cta": "Meet the team"
 }
