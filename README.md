@@ -94,6 +94,25 @@ The site is technically complete enough for review and deployment, but these bus
 
 Planning ranges such as savings, payback and panel lifespan are intentionally labeled as estimates or typical ranges.
 
+## Bilingual (EN/ES)
+
+The site includes a complete English/Spanish bilingual system:
+
+- **English** (default, canonical) — all content
+- **Spanish** (secondary) — all visible content translated
+- **Selector** — EN/ES toggle in navbar on all pages
+- **Persistence** — language choice saved to localStorage
+- **Fallback** — missing keys fall back to English
+- **Legal pages** — Privacy/Terms in English only; legal disclaimer: English version controls
+
+### Implementation
+
+- `locales/en.json` — English translations (213 keys)
+- `locales/es.json` — Spanish translations (213 keys)
+- `assets/js/i18n.js` — Vanilla JS i18n engine (no dependencies)
+- `data-i18n` attributes on translatable elements across all 9 HTML pages
+- `data-lang-switch` buttons for EN/ES toggle
+
 ## Brand and contact details used
 
 - Brand: Gen 13 Solar
@@ -101,8 +120,35 @@ Planning ranges such as savings, payback and panel lifespan are intentionally la
 - Email: jfelizgen13@gmail.com
 - Service area: Dallas–Fort Worth, Texas
 - Domain: https://gen13solarco.com
-- Language: English
+- Languages: English (default), Spanish (secondary)
 
 ## Image note
 
 The project uses crops derived from the visual references and project screenshots supplied in the conversation. Confirm that Gen 13 Solar owns or has permission to publish every source image before production launch.
+
+## Demo status
+
+Demo ready: YES (demo preview). Production launch requires the client items listed under "Important launch edits" and in `audit/CLIENT-DECISIONS-REQUIRED.md`.
+
+### Demo local
+
+1. Install dependencies: `npm install`
+2. Start the local server: `npm run dev` (serves on `http://localhost:4173`)
+3. Open the site in a browser at `http://localhost:4173`
+4. Review the main pages: Home, Services, Projects, About, Contact
+
+### Comandos
+
+```bash
+npm install
+npm run check
+npm run dev
+```
+
+### Notas
+
+- Stack: static HTML/CSS/JS, no framework, no build step.
+- Package manager: npm. Scripts available: `dev` (serve), `check` (local link / H1 / meta validation).
+- `build`, `lint`, `test` scripts are not defined in `package.json` (not a failure).
+- Client-pending items (social URLs, legal review, claim verification, FormSubmit activation, domain) are documented, not blockers for a demo preview.
+- Image assets (PNG/JPG/JPEG/WEBP/GIF/ICO) were NOT modified during this review.

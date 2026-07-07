@@ -120,10 +120,14 @@
     <a class="brand" href="index.html" aria-label="Gen 13 Solar home">
       <img src="assets/images/gen13-logo.png" alt="Gen 13 Solar">
     </a>
-    <nav class="nav-links" aria-label="Primary navigation"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></nav>
+    <nav class="nav-links" aria-label="Primary navigation"><a href="index.html" aria-current="page" data-i18n="nav.home">Home</a><a href="about.html" data-i18n="nav.about">About</a><a href="services.html" data-i18n="nav.services">Services</a><a href="projects.html" data-i18n="nav.projects">Projects</a><a href="contact.html" data-i18n="nav.contact">Contact</a></nav>
     <div class="nav-cta">
       <a class="btn btn-outline btn-sm" href="tel:+19402067006"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg> Call now</a>
       <a class="btn btn-primary btn-sm" href="contact.html">Get free analysis <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a>
+    </div>
+    <div class="language-switcher" aria-label="Language selector">
+      <button type="button" data-lang-switch="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang-switch="es" aria-pressed="false">ES</button>
     </div>
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
   </div>
@@ -132,12 +136,12 @@
   <section class="hero">
     <div class="container hero__inner">
       <div class="hero__content reveal">
-        <p class="eyebrow">Residential & commercial solar service</p>
-        <h1>Energy independence <span class="kicker">starts here.</span></h1>
-        <p class="lead">Lower bills. More control. A solar system designed around your property, usage and long-term goals, not a one-size-fits-all sales pitch.</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Residential & commercial solar service</p>
+        <h1 data-i18n="hero.title1">Energy independence <span class="kicker" data-i18n="hero.title2">starts here.</span></h1>
+        <p class="lead" data-i18n="hero.subtitle">Lower bills. More control. A solar system designed around your property, usage and long-term goals, not a one-size-fits-all sales pitch.</p>
         <div class="hero__actions">
-          <a class="btn btn-primary" href="contact.html">Get free energy analysis <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a>
-          <a class="btn btn-outline" href="#calculator">Estimate your savings <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chart"></use></svg></a>
+          <a class="btn btn-primary" href="contact.html" data-i18n="hero.cta1">Get free energy analysis <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a>
+          <a class="btn btn-outline" href="#calculator" data-i18n="hero.cta2">Estimate your savings <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chart"></use></svg></a>
         </div>
         <div class="hero__meta">
           <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#shield"></use></svg> Licensed installation partners</span>
@@ -328,22 +332,26 @@
         <img src="assets/images/gen13-logo.png" alt="Gen 13 Solar">
         <p>Residential, commercial and community solar solutions for Dallas–Fort Worth, built around clear guidance, responsible design and long-term support.</p>
         <div class="socials" aria-label="Social links">
-          <a class="social-link" href="#" onclick="return false" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#facebook"></use></svg></a>
-          <a class="social-link" href="#" onclick="return false" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#instagram"></use></svg></a>
-          <a class="social-link" href="#" onclick="return false" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#linkedin"></use></svg></a>
+          <a class="social-link" href="https://www.facebook.com/share/19GcBaCjPY/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#facebook"></use></svg>
+          </a>
+          <!-- Instagram: CLIENT_DECISION_REQUIRED - no real URL provided -->
+          <a class="social-link" href="https://www.linkedin.com/company/gen-13-solar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#linkedin"></use></svg>
+          </a>
         </div>
       </div>
       <div class="footer-col">
-        <h3>Company</h3>
-        <div class="footer-links"><a href="about.html">About us</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a><a href="contact.html#financing">Financing support</a></div>
+        <h3 data-i18n="footer.company">Company</h3>
+        <div class="footer-links"><a href="about.html" data-i18n="footer.aboutUs">About us</a><a href="projects.html" data-i18n="footer.projects">Projects</a><a href="contact.html" data-i18n="footer.contact">Contact</a><a href="contact.html#financing" data-i18n="footer.financingSupport">Financing support</a></div>
       </div>
       <div class="footer-col">
-        <h3>Solutions</h3>
-        <div class="footer-links"><a href="services.html#residential">Residential solar</a><a href="services.html#commercial">Commercial solar</a><a href="services.html#nonprofits">Nonprofits & churches</a><a href="services.html#ev">EV charging & carports</a></div>
+        <h3 data-i18n="footer.solutions">Solutions</h3>
+        <div class="footer-links"><a href="services.html#residential" data-i18n="footer.residentialSolar">Residential solar</a><a href="services.html#commercial" data-i18n="footer.commercialSolar">Commercial solar</a><a href="services.html#nonprofits" data-i18n="footer.nonprofitsChurches">Nonprofits & churches</a><a href="services.html#ev" data-i18n="footer.evCharging">EV charging & carports</a></div>
       </div>
       <div class="footer-col">
-        <h3>Contact</h3>
-        <div class="footer-links"><a href="tel:+19402067006">+1 (940) 206-7006</a><a href="mailto:jfelizgen13@gmail.com">jfelizgen13@gmail.com</a><span>Dallas–Fort Worth, U.S.</span><span>Mon–Sat, 8:00 AM–6:00 PM</span></div>
+        <h3 data-i18n="footer.contactTitle">Contact</h3>
+        <div class="footer-links"><a href="tel:+19402067006">+1 (940) 206-7006</a><a href="mailto:jfelizgen13@gmail.com">jfelizgen13@gmail.com</a><span data-i18n="footer.location">Dallas–Fort Worth, U.S.</span><span data-i18n="footer.hours">Mon–Sat, 8:00 AM–6:00 PM</span></div>
       </div>
     </div>
     <div class="container footer-bottom">
@@ -355,6 +363,7 @@
     <a class="floating-action floating-action--gold" href="contact.html" aria-label="Request a quote"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#mail"></use></svg></a>
     <a class="floating-action" href="tel:+19402067006" aria-label="Call Gen 13 Solar"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg></a>
   </nav>
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/app.js" defer></script>
 </body>
 </html>
