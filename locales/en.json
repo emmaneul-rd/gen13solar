@@ -234,5 +234,11 @@
   "team.person2.role": "Role pending",
   "team.person2.bio": "Installation planning, field coordination, and long-term support.",
   "team.note": "Team names and roles pending client approval.",
-  "team.cta": "Meet the team"
+  "team.cta": "Meet the team",
+
+  "solarPath.label": "Choose your solar path:",
+  "solarPath.homeowners": "Homeowners",
+  "solarPath.businesses": "Businesses",
+  "solarPath.churches": "Churches & nonprofits",
+  "solarPath.analysis": "Energy analysis"
 }

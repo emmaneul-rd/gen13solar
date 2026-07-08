@@ -6,6 +6,21 @@
   const menuToggle = $('.menu-toggle');
   const navLinks = $('.nav-collapse');
 
+  const scrollProgress = $('.scroll-progress');
+  if (!scrollProgress && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const el = document.createElement('div');
+    el.className = 'scroll-progress';
+    el.setAttribute('role', 'progressbar');
+    el.setAttribute('aria-hidden', 'true');
+    document.body.prepend(el);
+    const updateProgress = () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      el.style.width = h > 0 ? `${(window.scrollY / h) * 100}%` : '0%';
+    };
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+  }
+
   const syncHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
   syncHeader();
   window.addEventListener('scroll', syncHeader, { passive: true });

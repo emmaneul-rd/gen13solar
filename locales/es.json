@@ -234,5 +234,11 @@
   "team.person2.role": "Cargo pendiente",
   "team.person2.bio": "Planificación de instalación, coordinación en campo y soporte a largo plazo.",
   "team.note": "Nombres y cargos pendientes de aprobación del cliente.",
-  "team.cta": "Conoce al equipo"
+  "team.cta": "Conoce al equipo",
+
+  "solarPath.label": "Elige tu camino solar:",
+  "solarPath.homeowners": "Hogares",
+  "solarPath.businesses": "Negocios",
+  "solarPath.churches": "Iglesias y organizaciones",
+  "solarPath.analysis": "Análisis energético"
 }
