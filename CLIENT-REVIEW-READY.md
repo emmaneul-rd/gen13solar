@@ -1,12 +1,14 @@
 # Gen 13 Solar Client Review Ready
 
 ## Status
-CLIENT_REVIEW_READY
+CLIENT_REVIEW_READY + CLIENT_CONTENT_INTEGRATED
 
 ## What the client can review now
 - **Pages:** Home, About, Services, Projects, Contact, Thank You, Privacy, Terms, 404
 - **English content:** Complete on all pages — hero, services, calculator, FAQ, testimonials, CTA bands, footer
-- **Spanish content:** Complete EN/ES toggle on all 9 pages with 213 translation keys
+- **Spanish content:** Complete EN/ES toggle on all 9 pages; ES switch verified functional (was previously broken by invalid locale JSON, now fixed)
+- **Founder content:** "About Jorge Feliz" full bio + Colossians 3:23 on About; Jorge Feliz founder card on Home
+- **Services design section:** New "Design intelligence behind every proposal" — full 12-point professional solar design grid, EN/ES
 - **Language switcher:** EN/ES buttons in navbar on every page; persists choice in localStorage
 - **Contact flow:** Form wired to FormSubmit (pending client activation); validation, thank-you page
 - **Social links:** LinkedIn (real), Facebook (real), Instagram (commented — CLIENT_DECISION_REQUIRED)

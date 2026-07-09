@@ -29,8 +29,20 @@ for (const file of htmlFiles) {
   }
 }
 
+/* ---- validate locale JSON (i18n must parse or ES switch silently breaks) ---- */
+const localeFiles = ['locales/en.json', 'locales/es.json'];
+for (const rel of localeFiles) {
+  try {
+    const raw = await readFile(join(root, rel), 'utf8');
+    JSON.parse(raw);
+  } catch (err) {
+    console.error(`[I18N] ${rel} is not valid JSON: ${err.message}`);
+    failures++;
+  }
+}
+
 if (failures) {
   console.error(`Site check failed with ${failures} issue(s).`);
   process.exit(1);
 }
-console.log(`PASS: checked ${htmlFiles.length} HTML files and local asset references.`);
+console.log(`PASS: checked ${htmlFiles.length} HTML files, local asset references, and ${localeFiles.length} locale files.`);

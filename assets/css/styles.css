@@ -815,6 +815,42 @@ html.js .reveal-group.is-visible > *:nth-child(6) { animation-delay: 400ms; }
   .section--services-home .service-card:nth-child(n+5) { display: none; }
 }
 
+/* ===== Design analysis grid ===== */
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 14px;
+}
+.design-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.7);
+  border: 1px solid var(--slate-200);
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.design-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(246,185,0,.4);
+  box-shadow: 0 8px 24px rgba(3,20,36,.08);
+}
+.design-item .icon {
+  color: var(--gold-500);
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+@media (max-width: 860px) {
+  .design-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 620px) {
+  .design-grid { grid-template-columns: 1fr; }
+}
+
 /* ===== Solar path quick nav ===== */
 .solar-path { background: var(--cream-50); border-block: 1px solid var(--slate-200); }
 .solar-path__inner { display: flex; align-items: center; gap: 16px; padding: 14px 0; flex-wrap: wrap; }
@@ -871,7 +907,18 @@ html.js .reveal-group.is-visible > *:nth-child(6) { animation-delay: 400ms; }
   text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px;
 }
 .team-card__bio { color: var(--slate-700, #475569); font-size: .88rem; line-height: 1.5; margin: 0; }
-.team-note { margin-top: 22px; font-size: .82rem; color: var(--slate-500, #64748b); }
+.founder-verse {
+  margin-top: 28px;
+  padding: 20px 24px;
+  border-left: 3px solid var(--gold-500);
+  background: rgba(246,185,0,.08);
+  border-radius: 0 12px 12px 0;
+  color: var(--navy-900);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.6;
+  font-size: .92rem;
+}
 
 /* ===== Scroll progress bar ===== */
 .scroll-progress {

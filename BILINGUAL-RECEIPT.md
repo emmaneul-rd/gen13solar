@@ -3,6 +3,18 @@
 ## Verdict
 BILINGUAL_IMPLEMENTED
 
+## Update — 2026-07-08
+- **ES switch restored.** Both `locales/en.json` and `locales/es.json` previously contained a stray
+  double comma (`",,"`) on the `founder.verse` line, making the JSON invalid. The i18n loader's
+  `JSON.parse` threw, translations stayed empty, and the EN/ES toggle silently no-op'd (page stayed
+  English). Both files are now valid JSON and the switch populates Spanish on every page.
+- **New keys added:** `services.designEyebrow`, `services.designSubtitle`, `services.designClosing`,
+  `services.designTagline` (EN + ES) to support the new Services design-intelligence section.
+- **Guard added:** `npm run check` now validates both locale files with `JSON.parse` and fails on
+  invalid JSON (`[I18N]` message), so this regression cannot ship silently again.
+- **Verified:** All `data-i18n` keys on `index.html`, `about.html`, and `services.html` resolve in
+  both EN and ES; `npm run check` passes (9 HTML + 2 locale files).
+
 ## Summary
 The site now supports English (default) and Spanish (secondary) across all 9 HTML pages with a consistent, no-dependency vanilla JS i18n engine.
 
