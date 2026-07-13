@@ -279,5 +279,10 @@
   "solarPath.homeowners": "Homeowners",
   "solarPath.businesses": "Businesses",
   "solarPath.churches": "Churches & nonprofits",
-  "solarPath.analysis": "Energy analysis"
+  "solarPath.analysis": "Energy analysis",
+
+  "whatsapp.label": "WhatsApp",
+  "whatsapp.pending": "Number pending",
+  "whatsapp.pendingFull": "Number pending confirmation",
+  "whatsapp.number": "+1 (___) ___-____"
 }

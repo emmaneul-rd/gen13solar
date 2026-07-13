@@ -161,4 +161,22 @@
 
   const year = new Date().getFullYear();
   $$('[data-year]').forEach(node => { node.textContent = String(year); });
+
+  /* ---- WhatsApp (visual placeholder) ---- */
+  const WHATSAPP_NUMBER = "";
+  const WHATSAPP_MSG_EN = "Hi, I'm interested in solar energy for my property.";
+  const WHATSAPP_MSG_ES = "Hola, estoy interesado en energía solar para mi propiedad.";
+
+  $$('.whatsapp-btn[data-whatsapp]').forEach(btn => {
+    if (WHATSAPP_NUMBER) {
+      const lang = document.documentElement.lang || 'en';
+      const msg = lang === 'es' ? WHATSAPP_MSG_ES : WHATSAPP_MSG_EN;
+      btn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+      btn.removeAttribute('aria-disabled');
+      btn.style.cursor = 'pointer';
+    } else {
+      btn.href = 'javascript:void(0)';
+      btn.setAttribute('aria-disabled', 'true');
+    }
+  });
 })();
