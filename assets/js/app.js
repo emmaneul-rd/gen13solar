@@ -2,6 +2,19 @@
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
+  /* ---- Brand intro animation ---- */
+  const brandIntro = $('#brandIntro');
+  if (brandIntro && !sessionStorage.getItem('gen13BrandIntroSeen')) {
+    const duration = 1300;
+    setTimeout(() => {
+      brandIntro.classList.add('is-hidden');
+      brandIntro.addEventListener('transitionend', () => {
+        brandIntro.remove();
+        sessionStorage.setItem('gen13BrandIntroSeen', 'true');
+      }, { once: true });
+    }, duration);
+  }
+
   const header = $('.site-header');
   const menuToggle = $('.menu-toggle');
   const navLinks = $('.nav-collapse');

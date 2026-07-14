@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <script>document.documentElement.classList.add('js')</script>
+  <script>if(sessionStorage.getItem('gen13BrandIntroSeen')){document.documentElement.classList.add('intro-seen')}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gen 13 Solar | Residential & Commercial Solar in Dallas–Fort Worth</title>
   <meta name="description" content="Gen 13 Solar designs and installs residential, commercial and nonprofit solar solutions across Dallas–Fort Worth. Request a free energy analysis.">
@@ -107,6 +108,7 @@
   </script>
 </head>
 <body class="">
+  <div class="brand-intro" id="brandIntro" aria-hidden="true"><img src="assets/images/gen13-logo.png" alt="Gen 13 Solar"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 <aside class="topbar" aria-label="Site information">
   <div class="container topbar__inner">
@@ -230,9 +232,9 @@
       <div class="cards cards-5 reveal-group">
         <article class="audience-card"><img src="assets/images/project-premium-home.webp" alt="Residential solar home"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#home"></use></svg></div><h3>Homeowners</h3><p>Custom residential systems designed around comfort, value and predictable energy costs.</p></div></article>
         <article class="audience-card"><img src="assets/images/project-rooftop.webp" alt="Commercial rooftop solar"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#building"></use></svg></div><h3>Commercial</h3><p>Reduce operating exposure and plan scalable power for facilities and portfolios.</p></div></article>
-        <article class="audience-card"><img src="assets/images/project-community.webp" alt="Community building"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#heart"></use></svg></div><h3>Churches</h3><p>Energy strategies that protect more of the budget for ministry and community impact.</p></div></article>
-        <article class="audience-card"><img src="assets/images/project-pool-home.webp" alt="Solar installation supporting a community property"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#users"></use></svg></div><h3>Nonprofits</h3><p>Mission-aware solar planning with support for grants, incentives and financing pathways.</p></div></article>
-        <article class="audience-card"><img src="assets/images/project-residential.webp" alt="Large solar installation"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#factory"></use></svg></div><h3>Manufacturing</h3><p>Power planning for high-demand operations, carports and future fleet electrification.</p></div></article>
+        <article class="audience-card"><img src="assets/images/church-solar.webp" alt="Church building with solar panels at sunset"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#heart"></use></svg></div><h3>Churches</h3><p>Energy strategies that protect more of the budget for ministry and community impact.</p></div></article>
+        <article class="audience-card"><img src="assets/images/community-gathering.webp" alt="Community building with solar panels at sunset"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#users"></use></svg></div><h3>Nonprofits</h3><p>Mission-aware solar planning with support for grants, incentives and financing pathways.</p></div></article>
+        <article class="audience-card"><img src="assets/images/manufacturing-solar.webp" alt="Manufacturing facility with solar carport installation"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#factory"></use></svg></div><h3>Manufacturing</h3><p>Power planning for high-demand operations, carports and future fleet electrification.</p></div></article>
       </div>
     </div>
   </section>
@@ -253,7 +255,7 @@
         <a class="btn btn-navy" href="about.html">Meet Gen 13 Solar <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a>
       </div>
       <div class="media-frame reveal">
-        <img src="assets/images/project-residential.webp" alt="Completed residential solar project in North Texas">
+        <img src="assets/images/aerial-planning.webp" alt="Aerial drone view of rooftop solar planning and design analysis">
         <div class="media-frame__stat"><strong>DFW</strong><span>Community-centered solar service</span></div>
       </div>
     </div>
@@ -286,7 +288,7 @@
       <div class="text-center reveal"><p class="eyebrow" data-i18n="team.kicker">The team</p><h2 id="team-title" data-i18n="team.title">Meet the people behind Gen 13 Solar</h2></div>
       <div class="team-grid reveal-group">
         <article class="team-card">
-          <div class="team-avatar" aria-hidden="true">JF</div>
+          <div class="team-avatar team-avatar--img" aria-hidden="true"><img src="assets/images/founder.webp" alt="Jorge Feliz"></div>
           <div class="team-card__body">
             <h3 data-i18n="team.person1.name">Jorge Feliz</h3>
             <div class="team-card__role" data-i18n="team.person1.role">Founder & Owner</div>
@@ -416,7 +418,7 @@
   <footer class="site-footer">
     <div class="container footer-main">
       <div class="footer-brand">
-        <img src="assets/images/gen13-logo.png" alt="Gen 13 Solar">
+        <img src="assets/images/gen13-logo-white.png" alt="Gen 13 Solar">
         <p>Residential, commercial and community solar solutions for Dallas–Fort Worth, built around clear guidance, responsible design and long-term support.</p>
         <div class="socials" aria-label="Social links">
           <a class="social-link" href="https://www.facebook.com/share/19GcBaCjPY/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
