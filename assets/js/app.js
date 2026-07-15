@@ -100,7 +100,7 @@
   sunExposure?.addEventListener('input', updateCalculator);
   updateCalculator();
 
-  const revealItems = $$('.reveal, .reveal-group, [data-reveal]');
+  const revealItems = $$('.reveal, .reveal-group, .reveal-left, .reveal-right, .reveal-scale, .founder-text-reveal, .capabilities-grid, [data-reveal]');
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -113,6 +113,25 @@
     revealItems.forEach(item => observer.observe(item));
   } else {
     revealItems.forEach(item => item.classList.add('is-visible'));
+  }
+
+  /* ---- Founder photo subtle parallax (desktop only) ---- */
+  const founderPhoto = $('.founder-photo');
+  if (founderPhoto && !window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.innerWidth > 768) {
+    let ticking = false;
+    const updateParallax = () => {
+      const rect = founderPhoto.getBoundingClientRect();
+      const viewH = window.innerHeight;
+      if (rect.top < viewH && rect.bottom > 0) {
+        const progress = (viewH - rect.top) / (viewH + rect.height);
+        const offset = (progress - 0.5) * 14;
+        founderPhoto.style.transform = `translateY(${offset}px) scale(1.03)`;
+      }
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) { requestAnimationFrame(updateParallax); ticking = true; }
+    }, { passive: true });
   }
 
   const filters = $$('.filter-btn');
