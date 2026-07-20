@@ -249,10 +249,9 @@
   "team.person1.name": "Jorge Feliz",
   "team.person1.role": "Founder & Owner",
   "team.person1.bio": "Jorge founded Gen 13 Solar to help homeowners, businesses, churches and nonprofits make confident energy decisions through honest guidance, careful design and long-term value.",
-  "team.person2.name": "Team member pending",
-  "team.person2.role": "Role pending",
-  "team.person2.bio": "Installation planning, field coordination, and long-term support.",
-  "team.note": "CLIENT_SECOND_TEAM_MEMBER_REQUIRED",
+  "team.person2.name": "Maximo A. Crispin",
+  "team.person2.role": "Co-Founder",
+  "team.person2.bio": "Maximo helps clients understand their energy options through personal, professional and transparent guidance throughout the solar process.",
   "team.cta": "Meet the team",
 
   "homeDesignAnalysis.eyebrow": "Professional solar design",
@@ -275,6 +274,12 @@
   "founder.bio4": "Whether the goal is lowering electric bills, preparing for rising utility costs or investing in the future of a property, Jorge's focus is simple: give every client the knowledge and guidance needed to make a confident decision.",
   "founder.verse": "\"Whatever you do, work at it with all your heart, as working for the Lord, not for human masters.\" — Colossians 3:23 (NIV)",
 
+  "cofounder.eyebrow": "Co-Founder, Gen 13 Solar",
+  "cofounder.title": "About Maximo A. Crispin",
+  "cofounder.bio1": "It is an honor to be part of Gen 13 Solar and to contribute actively to the growth of a company committed to doing things differently.",
+  "cofounder.bio2": "My focus is on providing personal, professional and transparent service, guiding each client according to their needs and helping them understand options that may contribute to reducing their electricity costs.",
+  "cofounder.bio3": "At Gen 13 Solar, we share a vision of advancing a more sustainable future through personalized attention and support at every stage of the process.",
+
   "solarPath.label": "Choose your solar path:",
   "solarPath.homeowners": "Homeowners",
   "solarPath.businesses": "Businesses",
@@ -285,7 +290,7 @@
   "aerial.alt": "Aerial drone view of rooftop solar planning and design analysis",
 
   "whatsapp.label": "WhatsApp",
-  "whatsapp.pending": "Number pending",
-  "whatsapp.pendingFull": "Number pending confirmation",
-  "whatsapp.number": "+1 (___) ___-____"
+  "whatsapp.pending": "Chat on WhatsApp",
+  "whatsapp.pendingFull": "Chat on WhatsApp",
+  "whatsapp.number": "+1 (940) 206-7006"
 }

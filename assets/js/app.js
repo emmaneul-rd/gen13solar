@@ -2,6 +2,9 @@
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
+  /* ---- Enable JS-powered reveal system ---- */
+  document.documentElement.classList.add('js');
+
   /* ---- Brand intro animation ---- */
   const brandIntro = $('#brandIntro');
   if (brandIntro && !sessionStorage.getItem('gen13BrandIntroSeen')) {
@@ -26,17 +29,34 @@
     el.setAttribute('role', 'progressbar');
     el.setAttribute('aria-hidden', 'true');
     document.body.prepend(el);
+    let ticking = false;
     const updateProgress = () => {
       const h = document.documentElement.scrollHeight - window.innerHeight;
       el.style.width = h > 0 ? `${(window.scrollY / h) * 100}%` : '0%';
+      ticking = false;
     };
     updateProgress();
-    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('scroll', () => {
+      if (!ticking) { requestAnimationFrame(updateProgress); ticking = true; }
+    }, { passive: true });
   }
 
   const syncHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
   syncHeader();
   window.addEventListener('scroll', syncHeader, { passive: true });
+
+  /* ---- Hero staggered entrance ---- */
+  const heroContent = $('.hero__content');
+  const heroVisual = $('.hero__visual');
+  if (heroContent && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    requestAnimationFrame(() => {
+      heroContent.classList.add('is-animated');
+      if (heroVisual) heroVisual.classList.add('is-animated');
+    });
+  } else if (heroContent) {
+    heroContent.classList.add('is-animated');
+    if (heroVisual) heroVisual.classList.add('is-animated');
+  }
 
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
@@ -142,9 +162,23 @@
     filters.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
     projectCards.forEach(card => {
       const visible = category === 'all' || card.dataset.category === category;
-      card.hidden = !visible;
+      if (!visible) {
+        card.style.opacity = '0';
+        card.style.transform = 'scale(.96)';
+        setTimeout(() => { card.hidden = true; }, 200);
+      } else {
+        card.hidden = false;
+        requestAnimationFrame(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1)';
+        });
+      }
     });
   }));
+  /* Ensure visible cards have transition set */
+  projectCards.forEach(card => {
+    card.style.transition = 'opacity .25s ease, transform .25s ease';
+  });
 
   const toast = message => {
     let element = $('.toast');
@@ -194,21 +228,25 @@
   const year = new Date().getFullYear();
   $$('[data-year]').forEach(node => { node.textContent = String(year); });
 
-  /* ---- WhatsApp (visual placeholder) ---- */
-  const WHATSAPP_NUMBER = "";
-  const WHATSAPP_MSG_EN = "Hi, I'm interested in solar energy for my property.";
-  const WHATSAPP_MSG_ES = "Hola, estoy interesado en energía solar para mi propiedad.";
+  /* ---- WhatsApp ---- */
+  const WHATSAPP_NUMBER = "19402067006";
+  const WHATSAPP_MSG_EN = "Hello Gen 13 Solar, I would like a free solar energy analysis.";
+  const WHATSAPP_MSG_ES = "Hola Gen 13 Solar, me gustaría solicitar un análisis gratuito de energía solar.";
+
+  function getWhatsAppLink() {
+    const lang = document.documentElement.lang || 'en';
+    const msg = lang === 'es' ? WHATSAPP_MSG_ES : WHATSAPP_MSG_EN;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  }
 
   $$('.whatsapp-btn[data-whatsapp]').forEach(btn => {
-    if (WHATSAPP_NUMBER) {
-      const lang = document.documentElement.lang || 'en';
-      const msg = lang === 'es' ? WHATSAPP_MSG_ES : WHATSAPP_MSG_EN;
-      btn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-      btn.removeAttribute('aria-disabled');
-      btn.style.cursor = 'pointer';
-    } else {
-      btn.href = 'javascript:void(0)';
-      btn.setAttribute('aria-disabled', 'true');
-    }
+    btn.href = getWhatsAppLink();
+    btn.style.cursor = 'pointer';
+  });
+
+  document.addEventListener('gen13:langChanged', () => {
+    $$('.whatsapp-btn[data-whatsapp]').forEach(btn => {
+      btn.href = getWhatsAppLink();
+    });
   });
 })();
