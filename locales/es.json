@@ -145,7 +145,7 @@
   "calculator.systemLabel": "tamaño de sistem estimado",
   "calculator.offset": "0%",
   "calculator.offsetLabel": "compensación de red estimada",
-  "calculator.disclaimer": "Solo estimación educativa. La producción real, incentivos, tarifas de servicios públicos, precio del sistem, financiamiento y ahorros varian. Se requiere evaluación del sitio y análisis de servicios públicos antes de cualquier propuesta.",
+  "calculator.disclaimer": "Estimación únicamente educativa. La producción real, los incentivos, las tarifas eléctricas, el precio del sistema, el financiamiento y los ahorros pueden variar. Se requiere una evaluación del sitio y un análisis de la compañía eléctrica antes de presentar cualquier propuesta.",
   "calculator.cta": "Solicitar análisis verificado",
 
   "process.eyebrow": "Solar, simplificado",
