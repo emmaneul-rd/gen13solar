@@ -2,9 +2,6 @@
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
-  /* ---- Enable JS-powered reveal system ---- */
-  document.documentElement.classList.add('js');
-
   /* ---- Brand intro animation ---- */
   const brandIntro = $('#brandIntro');
   if (brandIntro && !sessionStorage.getItem('gen13BrandIntroSeen')) {
@@ -120,24 +117,59 @@
   sunExposure?.addEventListener('input', updateCalculator);
   updateCalculator();
 
+  /* ---- Reveal system: fail-open (content visible by default) ---- */
   const revealItems = $$('.reveal, .reveal-group, .reveal-left, .reveal-right, .reveal-scale, .founder-text-reveal, .capabilities-grid, [data-reveal]');
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
+
+  const revealEverything = () => {
+    revealItems.forEach(item => item.classList.add('is-visible'));
+  };
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reducedMotion || !('IntersectionObserver' in window) || revealItems.length === 0) {
+    revealEverything();
+  } else {
+    try {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
           entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.05,
+        rootMargin: '0px 0px 80px 0px'
+      });
+
+      revealItems.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        const alreadyNearViewport =
+          rect.top <= window.innerHeight + 80 &&
+          rect.bottom >= -80;
+
+        if (alreadyNearViewport) {
+          item.classList.add('is-visible');
+        } else {
+          observer.observe(item);
         }
       });
-    }, { threshold: 0.12 });
-    revealItems.forEach(item => observer.observe(item));
-  } else {
-    revealItems.forEach(item => item.classList.add('is-visible'));
+
+      document.documentElement.classList.add('motion-ready');
+
+      /* Safety net: reveal everything after 1.8s no matter what */
+      window.setTimeout(() => {
+        revealEverything();
+      }, 1800);
+    } catch (error) {
+      console.error('Reveal system failed:', error);
+      document.documentElement.classList.remove('motion-ready');
+      revealEverything();
+    }
   }
 
   /* ---- Founder photo subtle parallax (desktop only) ---- */
   const founderPhoto = $('.founder-photo');
-  if (founderPhoto && !window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.innerWidth > 768) {
+  if (founderPhoto && !reducedMotion && window.innerWidth > 768) {
     let ticking = false;
     const updateParallax = () => {
       const rect = founderPhoto.getBoundingClientRect();
@@ -239,13 +271,15 @@
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
   }
 
-  $$('.whatsapp-btn[data-whatsapp]').forEach(btn => {
+  $$('[data-whatsapp]').forEach(btn => {
     btn.href = getWhatsAppLink();
+    btn.target = '_blank';
+    btn.rel = 'noopener noreferrer';
     btn.style.cursor = 'pointer';
   });
 
   document.addEventListener('gen13:langChanged', () => {
-    $$('.whatsapp-btn[data-whatsapp]').forEach(btn => {
+    $$('[data-whatsapp]').forEach(btn => {
       btn.href = getWhatsAppLink();
     });
   });
