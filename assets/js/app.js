@@ -118,7 +118,7 @@
   updateCalculator();
 
   /* ---- Reveal system: fail-open (content visible by default) ---- */
-  const revealItems = $$('.reveal, .reveal-group, .reveal-left, .reveal-right, .reveal-scale, .founder-text-reveal, .capabilities-grid, [data-reveal]');
+  const revealItems = $$('.reveal, .reveal-group, .reveal-left, .reveal-right, .reveal-scale, .reveal-scale-group, .founder-text-reveal, .capabilities-grid, [data-reveal]');
 
   const revealEverything = () => {
     revealItems.forEach(item => item.classList.add('is-visible'));
