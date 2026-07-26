@@ -1065,20 +1065,28 @@ html.motion-ready .founder-text-reveal.is-visible:nth-child(4) { transition-dela
   background: var(--navy-950);
   color: var(--white);
 }
-.founder-identity__name {
+.founder-identity__person {
   min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+.founder-identity__person strong {
+  color: var(--white);
   font-size: 1rem;
   line-height: 1.2;
-  font-weight: 850;
 }
-.founder-identity__role {
+.founder-identity__person span {
+  color: rgba(255, 255, 255, .72);
+  font-size: .74rem;
+  line-height: 1.35;
+}
+.founder-identity__badge {
   flex: 0 0 auto;
   padding: 6px 10px;
   border-radius: 999px;
-  background: var(--gold-500);
   color: var(--navy-950);
-  font-size: .72rem;
-  line-height: 1;
+  background: var(--gold-500);
+  font-size: .7rem;
   font-weight: 900;
   letter-spacing: .08em;
 }
@@ -1089,8 +1097,16 @@ html.motion-ready .founder-text-reveal.is-visible:nth-child(4) { transition-dela
     gap: 8px;
     padding: 12px 16px;
   }
-  .founder-identity__name { font-size: .92rem; }
-  .founder-identity__role { align-self: flex-start; }
+  .founder-identity__person strong { font-size: .92rem; }
+  .founder-identity__badge { align-self: flex-start; }
+}
+@media (max-width: 390px) {
+  .founder-identity {
+    align-items: flex-start;
+  }
+  .founder-identity__person span {
+    max-width: 210px;
+  }
 }
 
 /* Capability cards */
