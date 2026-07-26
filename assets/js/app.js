@@ -2,6 +2,11 @@
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
+  const tx = (key, fallback = '') => {
+    const value = window.Gen13i18n?.t?.(key);
+    return value === undefined || value === null ? fallback : value;
+  };
+
   /* ---- Brand intro animation ---- */
   const brandIntro = $('#brandIntro');
   if (brandIntro && !sessionStorage.getItem('gen13BrandIntroSeen')) {
@@ -127,10 +132,10 @@
     const annualSavings = annualSpend * (offset / 100) * 0.84;
     const systemSize = Math.max(3.5, (bill / 21.5) * (1 + (4 - sun) * 0.07));
 
-    billOutput.textContent = `${formatUSD(bill)} ${Gen13i18n.t('app.perMonth')}`;
-    estimateSavings.textContent = `${formatUSD(annualSavings)} ${Gen13i18n.t('app.perYear')}`;
-    estimateSystem.textContent = `${systemSize.toFixed(1)} ${Gen13i18n.t('app.kW')}`;
-    estimateOffset.textContent = `${offset}${Gen13i18n.t('app.percent')}`;
+    billOutput.textContent = `${formatUSD(bill)} ${tx('app.perMonth', '/ month')}`;
+    estimateSavings.textContent = `${formatUSD(annualSavings)} ${tx('app.perYear', '/ yr')}`;
+    estimateSystem.textContent = `${systemSize.toFixed(1)} ${tx('app.kW', 'kW')}`;
+    estimateOffset.textContent = `${offset}${tx('app.percent', '%')}`;
 
     /* Denton-specific output */
     if (utility === 'denton' && dentonOutput) {
@@ -153,11 +158,11 @@
       const estimatedSolarValue = avoidedGridCost + exportCredit;
 
       if (dentonSelfConsumptionValue) {
-        dentonSelfConsumptionValue.textContent = selfConsumptionPercent + Gen13i18n.t('app.percent');
+        dentonSelfConsumptionValue.textContent = selfConsumptionPercent + tx('app.percent', '%');
       }
-      if (dentonOnSite) dentonOnSite.textContent = formatUSD(avoidedGridCost) + ' ' + Gen13i18n.t('app.perYear');
-      if (dentonExportCredit) dentonExportCredit.textContent = formatUSD(exportCredit) + ' ' + Gen13i18n.t('app.perYear');
-      if (dentonTotal) dentonTotal.textContent = formatUSD(estimatedSolarValue) + ' ' + Gen13i18n.t('app.perYear');
+      if (dentonOnSite) dentonOnSite.textContent = formatUSD(avoidedGridCost) + ' ' + tx('app.perYear', '/ yr');
+      if (dentonExportCredit) dentonExportCredit.textContent = formatUSD(exportCredit) + ' ' + tx('app.perYear', '/ yr');
+      if (dentonTotal) dentonTotal.textContent = formatUSD(estimatedSolarValue) + ' ' + tx('app.perYear', '/ yr');
     } else if (dentonOutput) {
       dentonOutput.hidden = true;
       if (dentonAdvanced) dentonAdvanced.hidden = true;
@@ -385,25 +390,43 @@
     btn.style.cursor = 'pointer';
   });
 
-  /* ---- Floating contact: delayed appearance on mobile ---- */
+  /* ---- Floating contact: smart appearance on mobile ---- */
   const floatingContact = $('.floating-contact');
   if (floatingContact && window.matchMedia('(max-width: 620px)').matches) {
     let shown = false;
     const showFloating = () => {
-      if (!shown) {
-        floatingContact.classList.add('is-visible');
-        shown = true;
-      }
+      if (!shown) { floatingContact.classList.add('is-visible'); shown = true; }
     };
-    setTimeout(showFloating, 2000);
-    window.addEventListener('scroll', () => {
-      const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-      if (scrollPercent > 0.85) {
-        floatingContact.classList.remove('is-visible');
-      } else {
-        showFloating();
-      }
-    }, { passive: true });
+    const hideFloating = () => {
+      floatingContact.classList.remove('is-visible');
+    };
+
+    // Show after 8 seconds + meaningful scroll (20%+)
+    setTimeout(() => {
+      if (window.scrollY > document.documentElement.scrollHeight * 0.2) showFloating();
+    }, 8000);
+
+    // Show when hero CTA leaves viewport
+    const heroCta = $('.hero__actions');
+    if (heroCta) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (!e.isIntersecting) showFloating(); });
+      }, { threshold: 0 });
+      observer.observe(heroCta);
+    }
+
+    // Show on calculator or FAQ interaction
+    $('#calculator')?.addEventListener('input', showFloating, { once: true });
+    $$('.faq-button').forEach(btn => btn.addEventListener('click', showFloating, { once: true }));
+
+    // Hide near footer or contact form
+    const hideZones = [$('.site-footer'), $('#contact-form')].filter(Boolean);
+    if (hideZones.length) {
+      const hideObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) hideFloating(); else if (shown) showFloating(); });
+      }, { threshold: 0.1 });
+      hideZones.forEach(el => hideObserver.observe(el));
+    }
   }
 
   document.addEventListener('gen13:langChanged', () => {
@@ -411,6 +434,8 @@
       btn.href = getWhatsAppLink();
     });
   });
+
+  document.addEventListener('gen13:langChanged', updateCalculator);
 
   /* ---- Testimonial carousel: dots + keyboard nav ---- */
   const testimonialTrack = $('.testimonials');
