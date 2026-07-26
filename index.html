@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <script>document.documentElement.classList.add('js')</script>
+  <script>try{var l=localStorage.getItem('gen13_lang');if(l==='es')document.documentElement.lang='es';}catch(e){}</script>
   <script>if(sessionStorage.getItem('gen13BrandIntroSeen')){document.documentElement.classList.add('intro-seen')}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gen 13 Solar | Residential & Commercial Solar in Dallas–Fort Worth</title>
@@ -151,13 +152,13 @@
           <a class="btn btn-outline" href="#calculator" data-i18n="hero.cta2">Estimate your savings <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chart"></use></svg></a>
         </div>
         <div class="hero__meta">
-          <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#shield"></use></svg> Licensed installation partners</span>
-          <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#badge"></use></svg> 10+ years combined experience</span>
-          <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#heart"></use></svg> Local, neighbor-first support</span>
+          <span data-i18n="index.hero.meta1"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#shield"></use></svg> Licensed installation partners</span>
+          <span data-i18n="index.hero.meta2"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#badge"></use></svg> 10+ years combined experience</span>
+          <span data-i18n="index.hero.meta3"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#heart"></use></svg> Local, neighbor-first support</span>
         </div>
       </div>
       <div class="hero__visual">
-        <img src="assets/images/hero-home.webp" alt="Modern Texas home with rooftop solar panels" fetchpriority="high">
+        <img src="assets/images/hero-home.webp" alt="Modern Texas home with rooftop solar panels" fetchpriority="high" data-i18n-attr="alt" data-i18n="hero.imageAlt">
         <div class="hero__badge">
           <strong data-i18n="hero.badgeTitle">Solar, simplified.</strong>
           <small data-i18n="hero.badgeText">From bill review and custom design to permits, installation, utility approval and monitoring.</small>
@@ -215,7 +216,7 @@
       <div class="text-center reveal">
         <p class="eyebrow" data-i18n="metrics.eyebrow">Real planning. Clear outcomes.</p>
         <h2 data-i18n="metrics.title">Numbers that help you make a better decision.</h2>
-        <p class="lead"><span data-i18n="metrics.subtitle">Every property is different. These figures are planning ranges, not guarantees.</span> Your proposal should be based on verified usage, roof conditions and utility rules.</p>
+        <p class="lead"><span data-i18n="metrics.subtitle">Every property is different. These figures are planning ranges, not guarantees.</span> <span data-i18n="metrics.disclaimer">Your proposal should be based on verified usage, roof conditions and utility rules.</span></p>
       </div>
       <div class="metrics reveal-group">
         <div class="metric"><div class="metric__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chart"></use></svg></div><strong data-i18n="metrics.savings">Up to 20–40%</strong><span data-i18n="metrics.savingsLabel">potentially lower energy costs</span><small data-i18n="metrics.savingsNote">Varies by site, plan and usage</small></div>
@@ -228,13 +229,13 @@
 
   <section class="section">
     <div class="container">
-      <div class="text-center reveal"><p class="eyebrow" data-i18n="audience.eyebrow">Who we serve</p><h2 data-i18n="audience.title">Solar built for homes, organizations and growing businesses.</h2><p class="lead"><span data-i18n="audience.subtitle">One contractor relationship, multiple energy paths:</span> rooftop solar, storage readiness, EV charging, carports and long-term system support.</p></div>
+      <div class="text-center reveal"><p class="eyebrow" data-i18n="audience.eyebrow">Who we serve</p><h2 data-i18n="audience.title">Solar built for homes, organizations and growing businesses.</h2><p class="lead"><span data-i18n="audience.subtitle">One contractor relationship, multiple energy paths:</span> <span data-i18n="audience.subtitleTrailing">rooftop solar, storage readiness, EV charging, carports and long-term system support.</span></p></div>
       <div class="cards cards-5 reveal-group">
-        <article class="audience-card"><img src="assets/images/project-premium-home.webp" alt="Residential solar home"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#home"></use></svg></div><h3 data-i18n="audience.homeowners">Homeowners</h3><p>Custom residential systems designed around comfort, value and predictable energy costs.</p></div></article>
-        <article class="audience-card"><img src="assets/images/project-rooftop.webp" alt="Commercial rooftop solar"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#building"></use></svg></div><h3 data-i18n="audience.commercial">Commercial</h3><p>Reduce operating exposure and plan scalable power for facilities and portfolios.</p></div></article>
-        <article class="audience-card"><img src="assets/images/church-solar.webp" alt="Church building with solar panels at sunset"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#heart"></use></svg></div><h3 data-i18n="audience.churches">Churches</h3><p>Energy strategies that protect more of the budget for ministry and community impact.</p></div></article>
-        <article class="audience-card"><img src="assets/images/community-gathering.webp" alt="Community building with solar panels at sunset"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#users"></use></svg></div><h3 data-i18n="audience.nonprofits">Nonprofits</h3><p>Mission-aware solar planning with support for grants, incentives and financing pathways.</p></div></article>
-        <article class="audience-card"><img src="assets/images/manufacturing-solar.webp" alt="Manufacturing facility with solar carport installation"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#factory"></use></svg></div><h3 data-i18n="audience.manufacturing">Manufacturing</h3><p>Power planning for high-demand operations, carports and future fleet electrification.</p></div></article>
+        <article class="audience-card"><img src="assets/images/project-premium-home.webp" data-i18n-attr="alt" data-i18n="audience.homeownersImgAlt" alt="Residential solar home"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#home"></use></svg></div><h3 data-i18n="audience.homeowners">Homeowners</h3><p data-i18n="audience.homeownersDesc">Custom residential systems designed around comfort, value and predictable energy costs.</p></div></article>
+        <article class="audience-card"><img src="assets/images/project-rooftop.webp" data-i18n-attr="alt" data-i18n="audience.commercialImgAlt" alt="Commercial rooftop solar"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#building"></use></svg></div><h3 data-i18n="audience.commercial">Commercial</h3><p data-i18n="audience.commercialDesc">Reduce operating exposure and plan scalable power for facilities and portfolios.</p></div></article>
+        <article class="audience-card"><img src="assets/images/church-solar.webp" data-i18n-attr="alt" data-i18n="audience.churchesImgAlt" alt="Church building with solar panels at sunset"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#heart"></use></svg></div><h3 data-i18n="audience.churches">Churches</h3><p data-i18n="audience.churchesDesc">Energy strategies that protect more of the budget for ministry and community impact.</p></div></article>
+        <article class="audience-card"><img src="assets/images/community-gathering.webp" data-i18n-attr="alt" data-i18n="audience.nonprofitsImgAlt" alt="Community building with solar panels at sunset"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#users"></use></svg></div><h3 data-i18n="audience.nonprofits">Nonprofits</h3><p data-i18n="audience.nonprofitsDesc">Mission-aware solar planning with support for grants, incentives and financing pathways.</p></div></article>
+        <article class="audience-card"><img src="assets/images/manufacturing-solar.webp" data-i18n-attr="alt" data-i18n="audience.manufacturingImgAlt" alt="Manufacturing facility with solar carport installation"><div class="audience-card__body"><div class="audience-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#factory"></use></svg></div><h3 data-i18n="audience.manufacturing">Manufacturing</h3><p data-i18n="audience.manufacturingDesc">Power planning for high-demand operations, carports and future fleet electrification.</p></div></article>
       </div>
     </div>
   </section>
@@ -246,17 +247,17 @@
         <h2 data-i18n="why.title">Local guidance without the pressure fog.</h2>
         <p class="lead"><span data-i18n="why.subtitle">We translate solar into a practical property decision:</span> what fits, what it costs, what it may save, what approvals are required and what support continues after activation.</p>
         <ul class="checklist">
-          <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> Residential and commercial system design</li>
-          <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> Transparent proposals and documented assumptions</li>
-          <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> Interconnection, permitting and utility coordination</li>
-          <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> Financing and incentive workflow support</li>
-          <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> Monitoring and post-installation service</li>
+          <li data-i18n="index.why.item1"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> Residential and commercial system design</li>
+          <li data-i18n="index.why.item2"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> Transparent proposals and documented assumptions</li>
+          <li data-i18n="index.why.item3"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> Interconnection, permitting and utility coordination</li>
+          <li data-i18n="index.why.item4"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> Financing and incentive workflow support</li>
+          <li data-i18n="index.why.item5"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> Monitoring and post-installation service</li>
         </ul>
         <a class="btn btn-navy" href="about.html" data-i18n="why.cta">Meet Gen 13 Solar <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a>
       </div>
       <div class="media-frame reveal">
-        <img src="assets/images/aerial-planning.webp" alt="Aerial drone view of rooftop solar planning and design analysis">
-        <div class="media-frame__stat"><strong>DFW</strong><span>Community-centered solar service</span></div>
+        <img src="assets/images/aerial-planning.webp" data-i18n-attr="alt" data-i18n="why.imageAlt" alt="Aerial drone view of rooftop solar planning and design analysis">
+        <div class="media-frame__stat"><strong data-i18n="why.statLabel">DFW</strong><span data-i18n="why.statValue">Community-centered solar service</span></div>
       </div>
     </div>
   </section>
@@ -283,6 +284,118 @@
     </div>
   </section>
 
+  <section class="section energy-context" id="energy-context">
+    <div class="container energy-context__inner">
+      <div class="energy-context__content reveal">
+        <p class="eyebrow" data-i18n="energyContext.eyebrow">Texas Energy Context</p>
+        <h2 data-i18n="energyContext.title">Electricity costs are changing. Your energy plan should, too.</h2>
+        <p class="lead" data-i18n="energyContext.subtitle">Texas residential electricity prices have risen over the past several years while the grid prepares for substantial new demand. Solar can reduce a property's exposure to purchased electricity, but actual results depend on usage, utility rules, system design, financing, and how much solar energy is consumed on-site.</p>
+
+        <div class="evidence-cards">
+          <div class="evidence-card reveal-group">
+            <div class="evidence-card__value" data-i18n="energyContext.card1Value">+23.4%</div>
+            <div class="evidence-card__label" data-i18n="energyContext.card1Label">Texas residential price change</div>
+            <div class="evidence-card__meta">
+              <span data-i18n="energyContext.card1Meta">2021–2024 · Statewide annual average</span>
+              <span class="evidence-card__source" data-i18n="energyContext.card1Source">Source: EIA</span>
+              <span class="evidence-card__status" data-i18n="energyContext.card1Status">Final</span>
+            </div>
+            <button class="evidence-card__details" aria-expanded="false" data-i18n="energyContext.showDetails">Show details</button>
+            <div class="evidence-card__drawer" hidden>
+              <p data-i18n="energyContext.card1Details">2021: 12.11¢/kWh → 2024: 14.94¢/kWh. Statewide average across all Texas residential customers. Source: U.S. Energy Information Administration, Form EIA-861.</p>
+            </div>
+          </div>
+
+          <div class="evidence-card reveal-group">
+            <div class="evidence-card__value" data-i18n="energyContext.card2Value">16.15¢</div>
+            <div class="evidence-card__label" data-i18n="energyContext.card2Label">Latest preliminary average</div>
+            <div class="evidence-card__meta">
+              <span data-i18n="energyContext.card2Meta">Jan–May 2026 · Preliminary YTD</span>
+              <span class="evidence-card__source" data-i18n="energyContext.card2Source">Source: EIA</span>
+              <span class="evidence-card__status evidence-card__status--preliminary" data-i18n="energyContext.card2Status">Preliminary</span>
+            </div>
+            <button class="evidence-card__details" aria-expanded="false" data-i18n="energyContext.showDetails">Show details</button>
+            <div class="evidence-card__drawer" hidden>
+              <p data-i18n="energyContext.card2Details">January–May 2026 Texas residential average: 16.15¢/kWh vs. 15.14¢/kWh for the same period in 2025. These are preliminary year-to-date figures, not finalized annual values. Source: U.S. Energy Information Administration, Electric Power Monthly.</p>
+            </div>
+          </div>
+
+          <div class="evidence-card reveal-group">
+            <div class="evidence-card__value" data-i18n="energyContext.card3Value">Grid demand growing</div>
+            <div class="evidence-card__label" data-i18n="energyContext.card3Label">Data centers drive projected load growth</div>
+            <div class="evidence-card__meta">
+              <span data-i18n="energyContext.card3Meta">ERCOT forecast · Largest new-load category</span>
+              <span class="evidence-card__source" data-i18n="energyContext.card3Source">Source: ERCOT</span>
+              <span class="evidence-card__status evidence-card__status--forecast" data-i18n="energyContext.card3Status">Forecast</span>
+            </div>
+            <button class="evidence-card__details" aria-expanded="false" data-i18n="energyContext.showDetails">Show details</button>
+            <div class="evidence-card__drawer" hidden>
+              <p data-i18n="energyContext.card3Details">ERCOT's 2025 long-term load forecast identifies data centers as the largest category of projected new large-load growth. Actual build-out, timing and grid impact depend on interconnection, permitting, market conditions and policy decisions. This does not represent currently operational facilities alone.</p>
+            </div>
+          </div>
+        </div>
+
+        <a class="btn btn-navy" href="texas-energy-costs.html" data-i18n="energyContext.cta">Compare your 5-year energy exposure <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a>
+      </div>
+
+      <div class="energy-context__chart reveal">
+        <h3 class="chart-title" data-i18n="energyContext.chartTitle">Texas Residential Electricity Price</h3>
+        <p class="chart-subtitle" data-i18n="energyContext.chartSubtitle">Annual average, cents per kWh</p>
+        <svg class="chart-svg" viewBox="0 0 400 260" role="img" data-i18n-attr="aria-label" data-i18n="chart.ariaLabel" aria-label="Bar chart: Texas residential electricity prices 2021-2024">
+          <title data-i18n="chart.svgTitle">Texas Residential Electricity Price, 2021-2024</title>
+          <!-- Y-axis -->
+          <line x1="50" y1="20" x2="50" y2="210" stroke="#c9d2dd" stroke-width="1"/>
+          <!-- Y-axis labels -->
+          <text x="45" y="214" text-anchor="end" font-size="11" fill="#6d7a8e" font-family="Manrope,sans-serif">0</text>
+          <text x="45" y="164" text-anchor="end" font-size="11" fill="#6d7a8e" font-family="Manrope,sans-serif">5</text>
+          <text x="45" y="114" text-anchor="end" font-size="11" fill="#6d7a8e" font-family="Manrope,sans-serif">10</text>
+          <text x="45" y="64" text-anchor="end" font-size="11" fill="#6d7a8e" font-family="Manrope,sans-serif">15</text>
+          <text x="45" y="28" text-anchor="end" font-size="11" fill="#6d7a8e" font-family="Manrope,sans-serif">18</text>
+          <!-- Grid lines -->
+          <line x1="50" y1="160" x2="390" y2="160" stroke="#e2e8ef" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="50" y1="110" x2="390" y2="110" stroke="#e2e8ef" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="50" y1="60" x2="390" y2="60" stroke="#e2e8ef" stroke-width="1" stroke-dasharray="4,4"/>
+          <!-- X-axis -->
+          <line x1="50" y1="210" x2="390" y2="210" stroke="#c9d2dd" stroke-width="1"/>
+          <!-- Bars: 1 unit = 10px, base at y=210. Value/18 * 190 for scale -->
+          <!-- 2021: 12.11 → height = (12.11/18)*190 = 127.6px → y = 210 - 127.6 = 82.4 -->
+          <rect class="chart-bar" x="75" y="82" width="60" height="128" rx="4" fill="#153d68"/>
+          <text x="105" y="76" text-anchor="middle" font-size="12" font-weight="700" fill="#153d68" font-family="Manrope,sans-serif">12.11¢</text>
+          <!-- 2022: 13.76 → height = (13.76/18)*190 = 145.1px → y = 210 - 145.1 = 64.9 -->
+          <rect class="chart-bar" x="160" y="65" width="60" height="145" rx="4" fill="#153d68"/>
+          <text x="190" y="59" text-anchor="middle" font-size="12" font-weight="700" fill="#153d68" font-family="Manrope,sans-serif">13.76¢</text>
+          <!-- 2023: 14.46 → height = (14.46/18)*190 = 152.5px → y = 210 - 152.5 = 57.5 -->
+          <rect class="chart-bar" x="245" y="57" width="60" height="153" rx="4" fill="#153d68"/>
+          <text x="275" y="51" text-anchor="middle" font-size="12" font-weight="700" fill="#153d68" font-family="Manrope,sans-serif">14.46¢</text>
+          <!-- 2024: 14.94 → height = (14.94/18)*190 = 157.6px → y = 210 - 157.6 = 52.4 -->
+          <rect class="chart-bar" x="330" y="52" width="60" height="158" rx="4" fill="#071c33"/>
+          <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="700" fill="#071c33" font-family="Manrope,sans-serif">14.94¢</text>
+          <!-- X-axis labels -->
+          <text x="105" y="230" text-anchor="middle" font-size="12" font-weight="700" fill="#142235" font-family="Manrope,sans-serif">2021</text>
+          <text x="190" y="230" text-anchor="middle" font-size="12" font-weight="700" fill="#142235" font-family="Manrope,sans-serif">2022</text>
+          <text x="275" y="230" text-anchor="middle" font-size="12" font-weight="700" fill="#142235" font-family="Manrope,sans-serif">2023</text>
+          <text x="360" y="230" text-anchor="middle" font-size="12" font-weight="700" fill="#142235" font-family="Manrope,sans-serif">2024</text>
+          <!-- +23.4% change label -->
+          <text x="220" y="252" text-anchor="middle" font-size="11" font-weight="800" fill="#2563EB" font-family="Manrope,sans-serif" data-i18n="chart.changeLabel">+23.4% change 2021→2024</text>
+        </svg>
+        <div class="chart-source">
+          <span data-i18n="energyContext.chartSource">Source: U.S. EIA, Form EIA-861</span>
+          <span data-i18n="energyContext.lastVerified">Last verified: July 2025</span>
+        </div>
+        <table class="sr-only">
+          <caption data-i18n="energyContext.chartCaption">Texas residential electricity prices, 2021–2024</caption>
+          <thead><tr><th scope="col" data-i18n="energyContext.chartColYear">Year</th><th scope="col" data-i18n="energyContext.chartColPrice">Price (cents per kWh)</th></tr></thead>
+          <tbody>
+            <tr><td>2021</td><td>12.11</td></tr>
+            <tr><td>2022</td><td>13.76</td></tr>
+            <tr><td>2023</td><td>14.46</td></tr>
+            <tr><td>2024</td><td>14.94</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
   <section class="section section-cream" aria-labelledby="team-title">
     <div class="container">
       <div class="text-center reveal"><p class="eyebrow" data-i18n="team.kicker">The team</p><h2 id="team-title" data-i18n="team.title">Meet the people behind Gen 13 Solar</h2></div>
@@ -291,18 +404,18 @@
           <div class="team-avatar team-avatar--img" aria-hidden="true"><img src="assets/images/founder.webp" alt="Jorge Feliz"></div>
           <div class="team-card__body">
             <h3 data-i18n="team.person1.name">Jorge Feliz</h3>
-            <div class="team-card__role" data-i18n="team.person1.role">Founder & Owner</div>
+            <div class="team-card__role" data-i18n="team.person1.role">CEO</div>
             <p class="team-card__bio" data-i18n="team.person1.bio">Jorge founded Gen 13 Solar to help homeowners, businesses, churches and nonprofits make confident energy decisions through honest guidance, careful design and long-term value.</p>
-            <a href="about.html#founder" class="team-card__link" aria-label="Learn more about Jorge Feliz">Learn more</a>
+            <a href="about.html#founder" class="team-card__link" data-i18n-attr="aria-label" data-i18n="team.person1.learnMoreAria" aria-label="Learn more about Jorge Feliz"><span data-i18n="team.learnMore">Learn more</span></a>
           </div>
         </article>
         <article class="team-card">
-          <div class="team-avatar team-avatar--img" aria-hidden="true"><img src="assets/images/maximo-crispin.jpg" alt="Maximo A. Crispin"></div>
+          <div class="team-avatar team-avatar--img team-avatar--maximo" aria-hidden="true"><img src="assets/images/maximo-crispin.jpg" alt="Maximo A. Crispin"></div>
           <div class="team-card__body">
             <h3 data-i18n="team.person2.name">Maximo A. Crispin</h3>
-            <div class="team-card__role" data-i18n="team.person2.role">Co-Founder</div>
+            <div class="team-card__role" data-i18n="team.person2.role">CCO</div>
             <p class="team-card__bio" data-i18n="team.person2.bio">Maximo helps clients understand their energy options through personal, professional and transparent guidance throughout the solar process.</p>
-            <a href="about.html#cofounder" class="team-card__link" aria-label="Learn more about Maximo A. Crispin">Learn more</a>
+            <a href="about.html#cofounder" class="team-card__link" data-i18n-attr="aria-label" data-i18n="team.person2.learnMoreAria" aria-label="Learn more about Maximo A. Crispin"><span data-i18n="team.learnMore">Learn more</span></a>
           </div>
         </article>
       </div>
@@ -314,12 +427,12 @@
     <div class="container">
       <div class="text-center reveal"><p class="eyebrow" data-i18n="services.eyebrow">Complete solar services</p><h2 data-i18n="services.title">From the first bill review to the years after installation.</h2></div>
       <div class="cards cards-3 reveal-group">
-        <article class="service-card"><div class="service-card__icon"><svg class="icon icon-lg" aria-hidden="true"><use href="assets/icons.svg#home"></use></svg></div><h3>Residential solar installation</h3><p>Right-sized rooftop systems engineered around usage, roof geometry, shade and ownership goals.</p><a href="services.html#residential">Explore service <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></article>
-        <article class="service-card"><div class="service-card__icon"><svg class="icon icon-lg" aria-hidden="true"><use href="assets/icons.svg#building"></use></svg></div><h3>Commercial solar installation</h3><p>Facility-scale solar strategies for operating cost control, resilience planning and ESG commitments.</p><a href="services.html#commercial">Explore service <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></article>
-        <article class="service-card"><div class="service-card__icon"><svg class="icon icon-lg" aria-hidden="true"><use href="assets/icons.svg#heart"></use></svg></div><h3>Nonprofit & 501(c)(3) solutions</h3><p>Solar pathways tailored to mission-driven organizations, churches and community institutions.</p><a href="services.html#nonprofits">Explore service <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></article>
-        <article class="service-card"><div class="service-card__icon"><svg class="icon icon-lg" aria-hidden="true"><use href="assets/icons.svg#chart"></use></svg></div><h3>Energy analysis & optimization</h3><p>Usage review, interval-data analysis and practical opportunities to reduce avoidable consumption.</p><a href="services.html#analysis">Explore service <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></article>
-        <article class="service-card"><div class="service-card__icon"><svg class="icon icon-lg" aria-hidden="true"><use href="assets/icons.svg#car"></use></svg></div><h3>EV charging & solar carports</h3><p>Prepare homes, workplaces and parking assets for electric vehicles and shaded solar generation.</p><a href="services.html#ev">Explore service <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></article>
-        <article class="service-card"><div class="service-card__icon"><svg class="icon icon-lg" aria-hidden="true"><use href="assets/icons.svg#tools"></use></svg></div><h3>Monitoring & ongoing support</h3><p>System health checks, performance visibility, upgrades, diagnostics and service coordination.</p><a href="services.html#support">Explore service <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></article>
+        <article class="service-card"><div class="service-card__icon"><svg class="icon icon-lg" aria-hidden="true"><use href="assets/icons.svg#home"></use></svg></div><h3 data-i18n="index.services.residential">Residential solar installation</h3><p data-i18n="index.services.residentialDesc">Right-sized rooftop systems engineered around usage, roof geometry, shade and ownership goals.</p><a href="services.html#residential" data-i18n="index.services.explore">Explore service <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></article>
+        <article class="service-card"><div class="service-card__icon"><svg class="icon icon-lg" aria-hidden="true"><use href="assets/icons.svg#building"></use></svg></div><h3 data-i18n="index.services.commercial">Commercial solar installation</h3><p data-i18n="index.services.commercialDesc">Facility-scale solar strategies for operating cost control, resilience planning and ESG commitments.</p><a href="services.html#commercial" data-i18n="index.services.explore">Explore service <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></article>
+        <article class="service-card"><div class="service-card__icon"><svg class="icon icon-lg" aria-hidden="true"><use href="assets/icons.svg#heart"></use></svg></div><h3 data-i18n="index.services.nonprofits">Nonprofit &amp; 501(c)(3) solutions</h3><p data-i18n="index.services.nonprofitsDesc">Solar pathways tailored to mission-driven organizations, churches and community institutions.</p><a href="services.html#nonprofits" data-i18n="index.services.explore">Explore service <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></article>
+        <article class="service-card"><div class="service-card__icon"><svg class="icon icon-lg" aria-hidden="true"><use href="assets/icons.svg#chart"></use></svg></div><h3 data-i18n="index.services.analysis">Energy analysis &amp; optimization</h3><p data-i18n="index.services.analysisDesc">Usage review, interval-data analysis and practical opportunities to reduce avoidable consumption.</p><a href="services.html#analysis" data-i18n="index.services.explore">Explore service <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></article>
+        <article class="service-card"><div class="service-card__icon"><svg class="icon icon-lg" aria-hidden="true"><use href="assets/icons.svg#car"></use></svg></div><h3 data-i18n="index.services.ev">EV charging &amp; solar carports</h3><p data-i18n="index.services.evDesc">Prepare homes, workplaces and parking assets for electric vehicles and shaded solar generation.</p><a href="services.html#ev" data-i18n="index.services.explore">Explore service <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></article>
+        <article class="service-card"><div class="service-card__icon"><svg class="icon icon-lg" aria-hidden="true"><use href="assets/icons.svg#tools"></use></svg></div><h3 data-i18n="index.services.support">Monitoring &amp; ongoing support</h3><p data-i18n="index.services.supportDesc">System health checks, performance visibility, upgrades, diagnostics and service coordination.</p><a href="services.html#support" data-i18n="index.services.explore">Explore service <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></article>
       </div>
       <div class="services-view-all-wrap"><a class="btn btn-navy" href="services.html" data-i18n="services.viewAll">View all services</a></div>
     </div>
@@ -331,7 +444,7 @@
         <p class="eyebrow" data-i18n="calculator.eyebrow">Solar savings estimator</p>
         <h2 data-i18n="calculator.title">Turn your current bill into a planning conversation.</h2>
         <p data-i18n="calculator.subtitle">Adjust your monthly electricity bill and approximate sun exposure. The calculator offers a rough educational estimate, then Gen 13 Solar can validate it with real site and utility data.</p>
-        <ul class="checklist"><li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> No account login required</li><li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> No obligation</li><li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> Results shown instantly</li></ul>
+        <ul class="checklist"><li data-i18n="calculator.bullet1"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> No account login required</li><li data-i18n="calculator.bullet2"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> No obligation</li><li data-i18n="calculator.bullet3"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg> Results shown instantly</li></ul>
       </div>
       <div class="calculator-panel">
         <div class="form-group">
@@ -340,13 +453,80 @@
         </div>
         <div class="form-group" style="margin-top:22px">
           <label for="sunExposure" data-i18n="calculator.sunLabel">Approximate roof sun exposure</label>
-          <select id="sunExposure" class="form-control"><option value="1">Limited / significant shade</option><option value="2">Moderate sun</option><option value="3" selected>Good sun exposure</option><option value="4">Excellent / open exposure</option></select>
+          <select id="sunExposure" class="form-control"><option value="1" data-i18n="calculator.sun1">Limited / significant shade</option><option value="2" data-i18n="calculator.sun2">Moderate sun</option><option value="3" selected data-i18n="calculator.sun3">Good sun exposure</option><option value="4" data-i18n="calculator.sun4">Excellent / open exposure</option></select>
+        </div>
+        <div class="form-group" style="margin-top:22px">
+          <label for="utilitySelect" data-i18n="calc.utilityLabel">Your utility</label>
+          <select id="utilitySelect" class="form-control">
+            <option value="oncor" selected data-i18n="calc.utilityOncor">Oncor (Dallas–Fort Worth)</option>
+            <option value="centerpoint" data-i18n="calc.utilityCenterPoint">CenterPoint (Houston area)</option>
+            <option value="aep" data-i18n="calc.utilityAEP">AEP Texas</option>
+            <option value="tnmp" data-i18n="calc.utilityTNMP">TNMP</option>
+            <option value="denton" data-i18n="calc.utilityDenton">Denton Municipal Electric</option>
+          </select>
         </div>
         <div class="calc-results" aria-live="polite">
           <div class="calc-result"><strong id="estimateSavings">$0 / yr</strong><span data-i18n="calculator.savingsLabel">illustrative annual savings</span></div>
           <div class="calc-result"><strong id="estimateSystem">0 kW</strong><span data-i18n="calculator.systemLabel">estimated system size</span></div>
           <div class="calc-result"><strong id="estimateOffset">0%</strong><span data-i18n="calculator.offsetLabel">estimated grid offset</span></div>
         </div>
+        <div id="dentonOutput" class="denton-output" hidden>
+          <div class="denton-output__title" data-i18n="calc.dentonNote">Denton: exported energy credited at $0.05/kWh, not retail rate.</div>
+          <div class="denton-output__row"><span data-i18n="calc.dentonAvoidedCost">Avoided grid cost (on-site consumption)</span><strong id="dentonOnSite">—</strong></div>
+          <div class="denton-output__row"><span data-i18n="calc.dentonExportCredit">Export credit (at $0.05/kWh)</span><strong id="dentonExportCredit">—</strong></div>
+          <div class="denton-output__row"><span data-i18n="calc.dentonTotalBenefit">Estimated total solar value</span><strong id="dentonTotal">—</strong></div>
+          <p class="denton-output__disclaimer" data-i18n="calc.dentonDisclaimer">Estimated planning result. A bill-based analysis is required for a precise Denton calculation.</p>
+        </div>
+
+        <div id="dentonAdvanced" class="denton-advanced" hidden>
+          <button class="denton-advanced__toggle" type="button" aria-expanded="false" id="dentonAdvancedToggle">
+            <span data-i18n="calc.dentonAdvancedToggle">Advanced assumptions</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg>
+          </button>
+          <div id="dentonAdvancedPanel" class="denton-advanced__panel" hidden>
+            <div class="form-group">
+              <label for="dentonSelfConsumption" data-i18n="calc.dentonSelfConsumptionLabel">Solar production consumed on-site</label>
+              <div class="range-row">
+                <input id="dentonSelfConsumption" type="range" min="0" max="100" value="55" step="5">
+                <output id="dentonSelfConsumptionValue" class="range-output">55%</output>
+              </div>
+              <p class="form-hint" data-i18n="calc.dentonSelfConsumptionHint">This is a planning assumption, not a measured value. Actual self-consumption depends on the home's hourly energy use, solar production, system size, and battery operation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="five-year-panel">
+          <button class="five-year-toggle" type="button" aria-expanded="false" id="fiveYearToggle">
+            <span data-i18n="calc.fiveYearToggle">5-year utility exposure</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg>
+          </button>
+          <div id="fiveYearPanel" hidden>
+            <p class="calc-note" data-i18n="calc.scenarioDisclaimer">Rate-change scenarios are assumptions for comparison only, not forecasts of future prices.</p>
+            <div class="five-year-inputs">
+              <div class="form-group">
+                <label for="rateChange" data-i18n="calc.rateChangeLabel">Annual rate-change scenario</label>
+                <select id="rateChange" class="form-control">
+                  <option value="0" data-i18n="calc.rateChange0">0% (no change)</option>
+                  <option value="0.02" selected data-i18n="calc.rateChange2">2% per year</option>
+                  <option value="0.04" data-i18n="calc.rateChange4">4% per year</option>
+                  <option value="0.06" data-i18n="calc.rateChange6">6% per year</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="batteryCheck">
+                  <input type="checkbox" id="batteryCheck" style="margin-right:8px">
+                  <span data-i18n="calc.batteryLabel">Include battery storage</span>
+                </label>
+              </div>
+            </div>
+            <div class="five-year-results" aria-live="polite">
+              <div class="five-year-result"><strong id="fiveYearWithout">$0</strong><span data-i18n="calc.fiveYearWithout">5-year cost without solar</span></div>
+              <div class="five-year-result"><strong id="fiveYearWith">$0</strong><span data-i18n="calc.fiveYearWith">5-year cost with solar</span></div>
+              <div class="five-year-result"><strong id="fiveYearDiff">$0</strong><span data-i18n="calc.fiveYearDiff">Estimated difference</span></div>
+            </div>
+          </div>
+        </div>
+
         <p class="disclaimer" data-i18n="calculator.disclaimer">Educational estimate only. Actual production, incentives, utility rates, system price, financing and savings vary. A site assessment and utility analysis are required before any proposal.</p>
         <a class="btn btn-primary btn-block" href="contact.html" style="margin-top:18px" data-i18n="calculator.cta">Request a verified analysis <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a>
       </div>
@@ -370,10 +550,10 @@
     <div class="container">
       <div class="text-center reveal"><p class="eyebrow" data-i18n="projects.eyebrow">Selected installations</p><h2 data-i18n="projects.title">Work designed for real roofs and real energy goals.</h2><p class="lead" data-i18n="projects.subtitle">A small preview of residential and property-scale installations. Final project descriptions should be paired with verified client permissions and production data.</p></div>
       <div class="project-grid reveal-group">
-        <article class="project-card"><img src="assets/images/project-pool-home.webp" alt="Residential solar system overlooking a backyard pool"><div class="project-card__body"><span class="project-tag">Residential</span><h3>Whole-home rooftop array</h3><p>North Texas · Custom roof layout</p></div></article>
-        <article class="project-card"><img src="assets/images/project-rooftop.webp" alt="Close view of rooftop solar panels"><div class="project-card__body"><span class="project-tag">Upgrade</span><h3>High-efficiency roof retrofit</h3><p>DFW · Performance-oriented layout</p></div></article>
-        <article class="project-card"><img src="assets/images/project-residential.webp" alt="Rear roof solar installation"><div class="project-card__body"><span class="project-tag">Residential</span><h3>Back-roof solar design</h3><p>Low street visibility · Strong sun access</p></div></article>
-        <article class="project-card"><img src="assets/images/project-premium-home.webp" alt="Modern home with solar panels"><div class="project-card__body"><span class="project-tag">Premium home</span><h3>Architecture-aware solar integration</h3><p>Designed to complement the property</p></div></article>
+        <article class="project-card"><img src="assets/images/project-pool-home.webp" alt="Residential solar system overlooking a backyard pool"><div class="project-card__body"><span class="project-tag" data-i18n="index.projects.tagResidential">Residential</span><h3 data-i18n="index.projects.card1.title">Whole-home rooftop array</h3><p data-i18n="index.projects.card1.desc">North Texas · Custom roof layout</p></div></article>
+        <article class="project-card"><img src="assets/images/project-rooftop.webp" alt="Close view of rooftop solar panels"><div class="project-card__body"><span class="project-tag" data-i18n="index.projects.tagUpgrade">Upgrade</span><h3 data-i18n="index.projects.card2.title">High-efficiency roof retrofit</h3><p data-i18n="index.projects.card2.desc">DFW · Performance-oriented layout</p></div></article>
+        <article class="project-card"><img src="assets/images/project-residential.webp" alt="Rear roof solar installation"><div class="project-card__body"><span class="project-tag" data-i18n="index.projects.tagResidential">Residential</span><h3 data-i18n="index.projects.card3.title">Back-roof solar design</h3><p data-i18n="index.projects.card3.desc">Low street visibility · Strong sun access</p></div></article>
+        <article class="project-card"><img src="assets/images/project-premium-home.webp" alt="Modern home with solar panels"><div class="project-card__body"><span class="project-tag" data-i18n="index.projects.tagPremium">Premium home</span><h3 data-i18n="index.projects.card4.title">Architecture-aware solar integration</h3><p data-i18n="index.projects.card4.desc">Designed to complement the property</p></div></article>
       </div>
       <div class="text-center" style="margin-top:34px"><a class="btn btn-navy" href="projects.html" data-i18n="projects.viewGallery">View project gallery <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow"></use></svg></a></div>
     </div>
@@ -382,11 +562,12 @@
   <section class="section section-bluewash">
     <div class="container">
       <div class="text-center reveal"><p class="eyebrow" data-i18n="testimonials.eyebrow">Customer voices</p><h2 data-i18n="testimonials.title">Clear communication is part of the installation.</h2></div>
-      <div class="testimonials reveal-group">
-        <article class="testimonial"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>“The process was explained in plain language, and every question had a direct answer. We always knew what the next step was.”</blockquote><footer><div class="avatar">JR</div><div><strong>Jason R.</strong><span>Denton, TX</span></div></footer></article>
-        <article class="testimonial"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>“Professional, honest and attentive to the details of our building. The proposal gave us a real basis for a business decision.”</blockquote><footer><div class="avatar">MT</div><div><strong>Mark T.</strong><span>Flower Mound, TX</span></div></footer></article>
-        <article class="testimonial"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>“As a community organization, we needed patience and transparency. Gen 13 helped us understand the path without pressure.”</blockquote><footer><div class="avatar">PD</div><div><strong>Pastor David</strong><span>North Texas</span></div></footer></article>
+      <div class="testimonials reveal-group" role="region" aria-label="Customer testimonials" tabindex="0">
+        <article class="testimonial"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote data-i18n="index.testimonials.quote1">"The process was explained in plain language, and every question had a direct answer. We always knew what the next step was."</blockquote><footer><div class="avatar">JR</div><div><strong data-i18n="index.testimonials.author1">Jason R.</strong><span data-i18n="index.testimonials.location1">Denton, TX</span></div></footer></article>
+        <article class="testimonial"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote data-i18n="index.testimonials.quote2">"Professional, honest and attentive to the details of our building. The proposal gave us a real basis for a business decision."</blockquote><footer><div class="avatar">MT</div><div><strong data-i18n="index.testimonials.author2">Mark T.</strong><span data-i18n="index.testimonials.location2">Flower Mound, TX</span></div></footer></article>
+        <article class="testimonial"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote data-i18n="index.testimonials.quote3">"As a community organization, we needed patience and transparency. Gen 13 helped us understand the path without pressure."</blockquote><footer><div class="avatar">PD</div><div><strong data-i18n="index.testimonials.author3">Pastor David</strong><span data-i18n="index.testimonials.location3">North Texas</span></div></footer></article>
       </div>
+      <div class="testimonial-dots" role="tablist" aria-label="Testimonial navigation" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -394,12 +575,12 @@
     <div class="container">
       <div class="text-center reveal"><p class="eyebrow" data-i18n="faq.eyebrow">Popular questions</p><h2 data-i18n="faq.title">Solar answers without the sunshine smoke.</h2><p class="lead" data-i18n="faq.subtitle">These are general answers. Your system should be evaluated using your actual property, electric usage and utility requirements.</p></div>
       <div class="faq-list reveal">
-        <div class="faq-item"><button class="faq-button" aria-expanded="false">How does a home solar system work? <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#plus"></use></svg></button><div class="faq-panel"><div><p>Solar panels convert sunlight into direct-current electricity. An inverter converts that power into alternating current your home can use. Depending on your design, excess production may flow to the utility grid or charge a battery.</p></div></div></div>
-        <div class="faq-item"><button class="faq-button" aria-expanded="false">How long can solar panels last? <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#plus"></use></svg></button><div class="faq-panel"><div><p>Many modern panels are designed to operate for 25 years or more, although output gradually declines and warranties vary by manufacturer. Inverters and other components may have different replacement cycles.</p></div></div></div>
-        <div class="faq-item"><button class="faq-button" aria-expanded="false">Do I need a battery? <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#plus"></use></svg></button><div class="faq-panel"><div><p>No. Grid-tied solar can operate without storage. Batteries can add backup capability, time-of-use flexibility and more control, but the right choice depends on budget, outage concerns and utility rules.</p></div></div></div>
-        <div class="faq-item"><button class="faq-button" aria-expanded="false">Do panels work on cloudy or rainy days? <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#plus"></use></svg></button><div class="faq-panel"><div><p>Yes, though production is usually lower than under direct sun. Annual energy modeling accounts for local weather patterns rather than assuming every day is perfectly clear.</p></div></div></div>
-        <div class="faq-item"><button class="faq-button" aria-expanded="false">How can solar affect property value? <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#plus"></use></svg></button><div class="faq-panel"><div><p>Owned solar may contribute to buyer interest and perceived operating savings, but market impact varies. Financing structure, system condition, documentation and local appraisal practices all matter.</p></div></div></div>
-        <div class="faq-item"><button class="faq-button" aria-expanded="false">What size system should I get? <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#plus"></use></svg></button><div class="faq-panel"><div><p>The right size depends on annual usage, roof area, orientation, shade, panel output, future loads such as EV charging, utility limits and your financial goals. Bigger is not automatically better.</p></div></div></div>
+        <div class="faq-item"><button class="faq-button" aria-expanded="false" data-i18n="index.faq.q1">How does a home solar system work? <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#plus"></use></svg></button><div class="faq-panel"><div><p data-i18n="index.faq.a1">Solar panels convert sunlight into direct-current electricity. An inverter converts that power into alternating current your home can use. Depending on your design, excess production may flow to the utility grid or charge a battery.</p></div></div></div>
+        <div class="faq-item"><button class="faq-button" aria-expanded="false" data-i18n="index.faq.q2">How long can solar panels last? <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#plus"></use></svg></button><div class="faq-panel"><div><p data-i18n="index.faq.a2">Many modern panels are designed to operate for 25 years or more, although output gradually declines and warranties vary by manufacturer. Inverters and other components may have different replacement cycles.</p></div></div></div>
+        <div class="faq-item"><button class="faq-button" aria-expanded="false" data-i18n="index.faq.q3">Do I need a battery? <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#plus"></use></svg></button><div class="faq-panel"><div><p data-i18n="index.faq.a3">No. Grid-tied solar can operate without storage. Batteries can add backup capability, time-of-use flexibility and more control, but the right choice depends on budget, outage concerns and utility rules.</p></div></div></div>
+        <div class="faq-item"><button class="faq-button" aria-expanded="false" data-i18n="index.faq.q4">Do panels work on cloudy or rainy days? <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#plus"></use></svg></button><div class="faq-panel"><div><p data-i18n="index.faq.a4">Yes, though production is usually lower than under direct sun. Annual energy modeling accounts for local weather patterns rather than assuming every day is perfectly clear.</p></div></div></div>
+        <div class="faq-item"><button class="faq-button" aria-expanded="false" data-i18n="index.faq.q5">How can solar affect property value? <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#plus"></use></svg></button><div class="faq-panel"><div><p data-i18n="index.faq.a5">Owned solar may contribute to buyer interest and perceived operating savings, but market impact varies. Financing structure, system condition, documentation and local appraisal practices all matter.</p></div></div></div>
+        <div class="faq-item"><button class="faq-button" aria-expanded="false" data-i18n="index.faq.q6">What size system should I get? <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#plus"></use></svg></button><div class="faq-panel"><div><p data-i18n="index.faq.a6">The right size depends on annual usage, roof area, orientation, shade, panel output, future loads such as EV charging, utility limits and your financial goals. Bigger is not automatically better.</p></div></div></div>
       </div>
     </div>
   </section>
@@ -438,7 +619,7 @@
       </div>
       <div class="footer-col">
         <h3 data-i18n="footer.solutions">Solutions</h3>
-        <div class="footer-links"><a href="services.html#residential" data-i18n="footer.residentialSolar">Residential solar</a><a href="services.html#commercial" data-i18n="footer.commercialSolar">Commercial solar</a><a href="services.html#nonprofits" data-i18n="footer.nonprofitsChurches">Nonprofits & churches</a><a href="services.html#ev" data-i18n="footer.evCharging">EV charging & carports</a></div>
+        <div class="footer-links"><a href="services.html#residential" data-i18n="footer.residentialSolar">Residential solar</a><a href="services.html#commercial" data-i18n="footer.commercialSolar">Commercial solar</a><a href="services.html#nonprofits" data-i18n="footer.nonprofitsChurches">Nonprofits & churches</a><a href="services.html#ev" data-i18n="footer.evCharging">EV charging & carports</a><a href="texas-energy-costs.html" data-i18n="energyCosts.navLabel">Texas Energy Costs</a></div>
       </div>
       <div class="footer-col">
         <h3 data-i18n="footer.contactTitle">Contact</h3>

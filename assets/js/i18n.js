@@ -131,8 +131,55 @@
       btn.setAttribute('aria-pressed', btnLang === lng ? 'true' : 'false');
     });
 
+    /* translate page metadata */
+    applyMetadata(lng);
+
     /* dispatch event so other scripts can react */
     document.dispatchEvent(new CustomEvent('gen13:langChanged', { detail: { lang: lng } }));
+  }
+
+  /* ---- translate page metadata ---- */
+  function applyMetadata(lng) {
+    const page = getPageMetaKey();
+    if (!page) return;
+
+    const title = getTranslation(`meta.${page}.title`, lng);
+    const desc = getTranslation(`meta.${page}.description`, lng);
+
+    if (title) document.title = title;
+
+    const setMeta = (selector, attr, value) => {
+      const el = document.querySelector(selector);
+      if (el && value) el.setAttribute(attr, value);
+    };
+
+    if (desc) {
+      setMeta('meta[name="description"]', 'content', desc);
+      setMeta('meta[property="og:description"]', 'content', desc);
+      setMeta('meta[name="twitter:description"]', 'content', desc);
+    }
+    if (title) {
+      setMeta('meta[property="og:title"]', 'content', title);
+      setMeta('meta[name="twitter:title"]', 'content', title);
+    }
+  }
+
+  function getPageMetaKey() {
+    const path = window.location.pathname;
+    const file = path.split('/').pop() || 'index.html';
+    const map = {
+      'index.html': 'home',
+      'about.html': 'about',
+      'services.html': 'services',
+      'projects.html': 'projects',
+      'contact.html': 'contact',
+      'texas-energy-costs.html': 'energyCosts',
+      'privacy.html': 'privacy',
+      'terms.html': 'terms',
+      '404.html': 'notFound',
+      'thank-you.html': 'thankYou',
+    };
+    return map[file] || null;
   }
 
   /* ---- get translation with fallback ---- */
