@@ -430,7 +430,6 @@
       fragment.appendChild(dot);
     });
     testimonialDots.appendChild(fragment);
-    testimonialDots.setAttribute('aria-hidden', 'false');
 
     const updateDots = () => {
       const scrollLeft = testimonialTrack.scrollLeft;
