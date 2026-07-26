@@ -773,6 +773,7 @@ html.motion-ready .reveal.is-visible { opacity: 1; transform: none; }
   .hero__badge { left: 10px; bottom: 10px; max-width: 180px; padding: 10px 12px; }
   .hero__badge strong { font-size: .85rem; }
 }
+@media (max-width: 480px) {
   .hero__actions, .cta-band__actions { flex-direction: column; align-items: stretch; }
   .btn { width: 100%; }
   .hero__meta { display: grid; gap: 12px; }
