@@ -759,5 +759,12 @@
   "chart.year2022": "2022",
   "chart.year2023": "2023",
   "chart.year2024": "2024",
-  "chart.changeLabel": "+23.4% change 2021→2024"
+  "chart.changeLabel": "+23.4% change 2021→2024",
+  "services.modulesEyebrow": "Tier 1 equipment",
+  "services.modulesTitle": "Premium solar modules from leading manufacturers.",
+  "services.modulesSubtitle": "Gen 13 Solar sources Tier 1 photovoltaic modules with proven performance, strong warranties and reliable supply chains.",
+  "services.module1Desc": "Texas-based manufacturer with high-efficiency panels",
+  "services.module2Desc": "Premium Canadian-made monocrystalline modules",
+  "services.module3Desc": "Global Tier 1 manufacturer with 25-year warranties",
+  "services.module4Desc": "Advanced thin-film technology for superior performance"
 }

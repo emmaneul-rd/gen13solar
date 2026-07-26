@@ -759,5 +759,12 @@
   "404.heroDesc": "El enlace puede estar desactualizado o la página puede haberse movido.",
   "404.cta": "Volver al sol",
   "thankyou.heroTitle": "Gracias.",
-  "thankyou.heroDesc": "Su solicitud ha sido enviada a Gen 13 Solar. Un miembro del equipo puede hacer seguimiento usando la información de contacto que proporcionó."
+  "thankyou.heroDesc": "Su solicitud ha sido enviada a Gen 13 Solar. Un miembro del equipo puede hacer seguimiento usando la información de contacto que proporcionó.",
+  "services.modulesEyebrow": "Equipamiento Tier 1",
+  "services.modulesTitle": "Módulos solares premium de los principales fabricantes.",
+  "services.modulesSubtitle": "Gen 13 Solar utiliza módulos fotovoltaicos Tier 1 con rendimiento comprobado, garantías sólidas y cadenas de suministro confiables.",
+  "services.module1Desc": "Fabricante con sede en Texas con paneles de alta eficiencia",
+  "services.module2Desc": "Módulos monocristalinos premium fabricados en Canadá",
+  "services.module3Desc": "Fabricante global Tier 1 con garantías de 25 años",
+  "services.module4Desc": "Tecnología de película delgada avanzada para rendimiento superior"
 }

@@ -2234,6 +2234,56 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
+/* ===== Module grid (Tier 1 manufacturers) ===== */
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.module-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 16px;
+  border: 1px solid var(--slate-200);
+  border-radius: 16px;
+  background: var(--white);
+  transition: border-color var(--motion-base) var(--ease-standard), box-shadow var(--motion-base) var(--ease-standard);
+}
+.module-card:hover {
+  border-color: var(--gold-400);
+  box-shadow: 0 8px 24px rgba(7,28,51,.08);
+}
+.module-card img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 12px;
+  filter: grayscale(0.2);
+  transition: filter var(--motion-base) var(--ease-standard);
+}
+.module-card:hover img { filter: grayscale(0); }
+.module-card strong {
+  font-size: .9rem;
+  font-weight: 800;
+  color: var(--navy-900);
+  margin-bottom: 4px;
+}
+.module-card span {
+  font-size: .78rem;
+  color: var(--slate-600);
+  line-height: 1.4;
+}
+@media (max-width: 860px) {
+  .module-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .module-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .module-card { padding: 18px 12px; }
+  .module-card img { height: 36px; }
+}
+
 /* ===== Testimonial carousel dots ===== */
 .testimonial-dots {
   display: none;
