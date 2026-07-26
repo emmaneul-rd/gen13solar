@@ -766,5 +766,13 @@
   "services.module1Desc": "Texas-based manufacturer with high-efficiency panels",
   "services.module2Desc": "Premium Canadian-made monocrystalline modules",
   "services.module3Desc": "Global Tier 1 manufacturer with 25-year warranties",
-  "services.module4Desc": "Advanced thin-film technology for superior performance"
+  "services.module4Desc": "Advanced thin-film technology for superior performance",
+  "services.batteryEyebrow": "Battery storage",
+  "services.batteryTitle": "Store excess solar energy for when you need it most.",
+  "services.batteryDesc": "Battery storage lets you capture surplus daytime production and use it during evening peak hours, grid outages or high-demand periods. Gen 13 Solar designs storage-ready systems from the start, so you can add batteries whenever the timing is right.",
+  "services.batteryItem1": "Backup power during grid outages",
+  "services.batteryItem2": "Time-of-use rate optimization",
+  "services.batteryItem3": "EV charging from stored solar",
+  "services.batteryItem4": "Scalable capacity as needs grow",
+  "services.batteryCta": "Discuss storage options"
 }

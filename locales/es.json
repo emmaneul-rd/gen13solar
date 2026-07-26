@@ -766,5 +766,13 @@
   "services.module1Desc": "Fabricante con sede en Texas con paneles de alta eficiencia",
   "services.module2Desc": "Módulos monocristalinos premium fabricados en Canadá",
   "services.module3Desc": "Fabricante global Tier 1 con garantías de 25 años",
-  "services.module4Desc": "Tecnología de película delgada avanzada para rendimiento superior"
+  "services.module4Desc": "Tecnología de película delgada avanzada para rendimiento superior",
+  "services.batteryEyebrow": "Almacenamiento con baterías",
+  "services.batteryTitle": "Almacene energía solar excedentaria para cuando más la necesite.",
+  "services.batteryDesc": "El almacenamiento con baterías le permite capturar la producción excedentaria del día y usarla durante las horas pico de la noche, cortes de la red o períodos de alta demanda. Gen 13 Solar diseña sistemas listos para almacenamiento desde el inicio, para que pueda agregar baterías cuando el momento sea adecuado.",
+  "services.batteryItem1": "Energía de respaldo durante cortes de energía",
+  "services.batteryItem2": "Optimización de tarifas por uso horario",
+  "services.batteryItem3": "Carga de EV con solar almacenado",
+  "services.batteryItem4": "Capacidad escalable según crezcan las necesidades",
+  "services.batteryCta": "Explorar opciones de almacenamiento"
 }
