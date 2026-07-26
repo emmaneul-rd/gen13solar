@@ -899,7 +899,6 @@ html.motion-ready .reveal.is-visible { opacity: 1; transform: none; }
 }
 
 @media (max-width: 620px) {
-  .motion-strip { display: none; }
   .trustbar { display: none; }
   .container { width: min(calc(100% - 28px), var(--container)); }
   .topbar__inner { grid-template-columns: 1fr; justify-items: center; min-height: 34px; }
